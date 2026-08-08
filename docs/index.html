@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakingo - Modern 3D Sweet Experience</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <script type="module" crossorigin src="./assets/index-dyN6jB_p.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-H9U0tg4O.css">
+  </head>
+  <body>
+    <!-- 3D Canvas Background -->
+    <div id="canvas-container">
+      <canvas id="canvas-3d"></canvas>
+      <div id="canvas-loading" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Baking sweet 3D details...</p>
+      </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-icon">🍰</span>
+        <span class="logo-text">Bakingo</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#deconstruct" class="nav-link">Crafting</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#/admin" class="btn btn-secondary admin-toggle-btn">Chef Portal</a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Social Proof Sub-Header Banner -->
+    <div class="sub-header-banner">
+      <span>⭐ 4.9/5 Star Rated</span>
+      <span class="banner-divider">|</span>
+      <span>🍰 Over 5,000+ Cakes Delivered</span>
+    </div>
+
+    <!-- Main Content Sections -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="section hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">Where Art Meets <span class="highlight-text">Sweetness</span></h1>
+            <p class="hero-description">Experience our premium, handcrafted cakes and pastries made with organic, high-quality ingredients and a touch of magical creativity.</p>
+            <div class="hero-buttons">
+              <a href="#gallery" class="btn btn-primary">Explore Our Creations</a>
+              <a href="#deconstruct" class="btn btn-outline">See How It's Made</a>
+            </div>
+          </div>
+          <div class="hero-3d-placeholder">
+            <!-- This area is visually aligned with the fixed 3D canvas -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Deconstruction Section (Scroll-driven 3D action) -->
+      <section id="deconstruct" class="section deconstruct-section">
+        <div class="deconstruct-bg-glow"></div>
+        <div class="container deconstruct-container">
+          <!-- Text overlays that trigger at different scroll points -->
+          <div class="deconstruct-steps">
+            <div class="deconstruct-step" data-step="1">
+              <span class="step-num">01</span>
+              <h2>Premium Sponge Base</h2>
+              <p>Baked to soft, airy perfection using organic stone-ground flour, pasture-raised eggs, and rich Madagascar vanilla bean extract.</p>
+            </div>
+            <div class="deconstruct-step" data-step="2">
+              <span class="step-num">02</span>
+              <h2>Velvet Cream Filling</h2>
+              <p>Whipped double-cream infused with real strawberry reduction and premium white chocolate, layered meticulously for the ultimate melt-in-mouth texture.</p>
+            </div>
+            <div class="deconstruct-step" data-step="3">
+              <span class="step-num">03</span>
+              <h2>Strawberry Glaze & Toppings</h2>
+              <p>Finished with a glossy, vibrant berry glaze, hand-picked fresh organic strawberries, sweet macarons, and edible sprinkles.</p>
+            </div>
+          </div>
+          <div class="deconstruct-visual-space">
+            <!-- Left empty on desktop for the deconstructing cake -->
+            <div class="gallery-popouts-container" id="popouts-container">
+              <!-- Animated image cards will emerge here during deconstruction -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="section gallery-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge">Our Creations</span>
+            <h2>Fresh From The Oven</h2>
+            <p>Browse through our handcrafted masterpieces. Customize and order your dream cake today.</p>
+          </div>
+          
+          <!-- Category Filters -->
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Treats</button>
+            <button class="filter-btn" data-filter="cake">Cakes</button>
+            <button class="filter-btn" data-filter="pastry">Pastries</button>
+            <button class="filter-btn" data-filter="macaron">Macarons & Donuts</button>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews" class="section reviews-section">
+        <div class="container">
+          <div class="reviews-layout">
+            <div class="reviews-info">
+              <span class="badge">Guestbook</span>
+              <h2>Sweet Words from Sweet People</h2>
+              <p>We pride ourselves on taste and quality. Read reviews from our happy customers or share your own experience with us!</p>
+              
+              <!-- Review Stats Summary -->
+              <div class="rating-summary-box">
+                <div class="average-rating">
+                  <span class="rating-num">4.9</span>
+                  <span class="stars">★★★★★</span>
+                </div>
+                <p class="rating-count">Based on verified reviews</p>
+              </div>
+            </div>
+
+            <div class="reviews-feed-container">
+              <!-- Comment Submission Form -->
+              <form id="review-form" class="review-form">
+                <h3>Leave a Review</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="review-name">Name</label>
+                    <input type="text" id="review-name" required placeholder="Your name">
+                  </div>
+                  <div class="form-group">
+                    <label>Rating</label>
+                    <div class="rating-select" id="rating-select">
+                      <span data-val="5" class="star-btn">★</span>
+                      <span data-val="4" class="star-btn">★</span>
+                      <span data-val="3" class="star-btn">★</span>
+                      <span data-val="2" class="star-btn">★</span>
+                      <span data-val="1" class="star-btn">★</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="review-text">Review</label>
+                  <textarea id="review-text" required rows="3" placeholder="Tell us how much you loved our treats..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Submit Review</button>
+                <p class="form-note">⚠️ Reviews are moderated and will appear publicly once approved by our chefs.</p>
+              </form>
+
+              <!-- Reviews Feed -->
+              <div class="reviews-feed" id="reviews-feed">
+                <!-- Dynamically populated with approved comments -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <span class="logo-text">🍰 Bakingo</span>
+          <p>Delivering premium sweet joy since 2024.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="#hero">Home</a>
+            <a href="#deconstruct">Crafting Process</a>
+            <a href="#gallery">Creations</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📧 hello@bakingo.com</p>
+            <p>📞 +1 (555) 123-BAKE</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bakingo Bakery. Designed for sweet lovers.</p>
+      </div>
+    </footer>
+
+    <!-- Admin Panel Overlay (SPA Screen) -->
+    <div id="admin-panel" class="admin-panel">
+      <div class="admin-header-bar">
+        <h2>👨‍🍳 Bakingo Chef Control Center</h2>
+        <a href="#" class="btn btn-outline close-admin-btn">Exit Admin</a>
+      </div>
+
+      <!-- Admin Login Box -->
+      <div id="admin-login-box" class="admin-login-box">
+        <h3>Chef Authentication</h3>
+        <p class="login-instructions">Please enter your bakery credentials to moderate comments and manage gallery photos.</p>
+        <form id="admin-login-form">
+          <div class="form-group">
+            <label for="admin-username">Username</label>
+            <input type="text" id="admin-username" autocomplete="username" required placeholder="Username (Hint: admin)">
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" autocomplete="current-password" required placeholder="Password (Hint: bakingo-sweet-admin)">
+          </div>
+          <div id="login-error" class="login-error-msg"></div>
+          <button type="submit" class="btn btn-primary w-full">Access Dashboard</button>
+        </form>
+      </div>
+
+      <!-- Admin Dashboard Content (Hidden by default until logged in) -->
+      <div id="admin-dashboard-content" class="admin-dashboard-content hidden">
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="photo-tab">Manage Gallery & 3D Popouts</button>
+          <button class="admin-tab-btn" data-tab="comment-tab">
+            Moderate Reviews 
+            <span class="badge-count" id="pending-count-badge">0</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: Photo & Product Management -->
+        <div id="photo-tab" class="admin-tab-content active">
+          <div class="tab-header">
+            <h3>Gallery & 3D Creations</h3>
+            <p>Upload new pastry pictures, delete existing ones, or choose which creations "pop out" during the 3D scroll deconstruction.</p>
+          </div>
+          
+          <div class="admin-photo-grid-layout">
+            <!-- Photo Upload Form -->
+            <form id="photo-upload-form" class="photo-upload-form">
+              <h4>Add New Treat</h4>
+              <div class="form-group">
+                <label for="photo-title">Title</label>
+                <input type="text" id="photo-title" required placeholder="e.g. Royal Strawberry Cake">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="photo-price">Price (₹)</label>
+                  <input type="number" id="photo-price" step="0.01" required placeholder="e.g. 450.00">
+                </div>
+                <div class="form-group">
+                  <label for="photo-category">Category</label>
+                  <select id="photo-category" required>
+                    <option value="cake">Cake</option>
+                    <option value="pastry">Pastry</option>
+                    <option value="macaron">Macaron & Donut</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="photo-desc">Description</label>
+                <textarea id="photo-desc" required rows="2" placeholder="Describe the flavors..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="photo-file">Upload Image</label>
+                <div class="file-drop-zone">
+                  <input type="file" id="photo-file" accept="image/*" required>
+                  <div class="drop-zone-text">
+                    <span>📁 Click to choose image</span>
+                    <p class="file-preview-text" id="file-name-preview">Max size 2MB</p>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-full">Upload & Add to Bakery</button>
+            </form>
+
+            <!-- Current Photos List -->
+            <div class="admin-items-list-container">
+              <h4>Current Creations</h4>
+              <div class="admin-items-list" id="admin-items-list">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Comment Moderation -->
+        <div id="comment-tab" class="admin-tab-content">
+          <div class="tab-header">
+            <h3>Review Moderation</h3>
+            <p>Review customer feedbacks. Approved comments will show up in the public guestbook section instantly.</p>
+          </div>
+          
+          <div class="moderation-list" id="moderation-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Modal (for gallery click) -->
+    <div id="details-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <div class="modal-body-layout">
+          <div class="modal-image-side">
+            <img id="modal-img" src="" alt="">
+          </div>
+          <div class="modal-info-side">
+            <span class="badge" id="modal-badge">Cake</span>
+            <h2 id="modal-title">Treat Name</h2>
+            <p class="modal-price" id="modal-price">₹0.00</p>
+            <p class="modal-desc" id="modal-desc">Treat description goes here.</p>
+            <div class="modal-features">
+              <div class="feature-tag">🍃 100% Organic</div>
+              <div class="feature-tag">🥚 Cage-Free Eggs</div>
+              <div class="feature-tag">🍓 Fresh Fruits</div>
+            </div>
+            <button class="btn btn-primary w-full order-now-btn">Order This Creation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Module Script -->
+  </body>
+</html>
