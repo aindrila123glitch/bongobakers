@@ -3,335 +3,718 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bakingo - Modern 3D Sweet Experience</title>
+    <title>Bongo Bakers Kolkata | Be Deliciously Surprised...</title>
+    <meta name="description" content="Bongo Bakers Kolkata - Handcrafted celebration cakes, theme cakes, artisanal chocolates, and fresh daily bakes at 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037. Order via WhatsApp 9330703521." />
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>" />
+    <link rel="icon" type="image/png" href="./bongo-logo.png" />
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Main Style -->
-    <script type="module" crossorigin src="./assets/index-dyN6jB_p.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-H9U0tg4O.css">
+    <script type="module" crossorigin src="./assets/index-DEJ3JoQn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DmQPWSyZ.css">
   </head>
   <body>
-    <!-- 3D Canvas Background -->
-    <div id="canvas-container">
-      <canvas id="canvas-3d"></canvas>
-      <div id="canvas-loading" class="loading-overlay">
-        <div class="spinner"></div>
-        <p>Baking sweet 3D details...</p>
+    <!-- Top Announcement & Quick Contact Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-container">
+        <div class="top-bar-left">
+          <span class="delivery-pill">🚀 Delivering Joy Across Kolkata</span>
+          <span class="address-pill">📍 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:9330703521" class="top-link" id="top-phone-link">
+            <span class="icon">📞</span> 9330703521
+          </a>
+          <span class="top-divider">|</span>
+          <a href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers!%20I%20would%20like%20to%20order%20a%20cake." target="_blank" rel="noopener" class="top-link whatsapp-pill" id="top-whatsapp-link">
+            <span class="icon">💬</span> WhatsApp Us
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- Sticky Header -->
-    <header class="main-header">
-      <div class="logo">
-        <span class="logo-icon">🍰</span>
-        <span class="logo-text">Bakingo</span>
+    <!-- Sticky Main Header -->
+    <header class="main-header" id="header">
+      <div class="container header-container">
+        <a href="#/" class="brand-logo" id="brand-logo-link">
+          <img src="./bongo-logo-transparent.png" alt="Bongo Bakers Kolkata" class="logo-image" id="site-logo">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links" id="main-nav">
+          <a href="#/" class="nav-link active" data-target="home">Home</a>
+          <a href="#about" class="nav-link" data-target="about">About Us</a>
+          <a href="#products-section" class="nav-link" data-target="products-section">Menu & Cakes</a>
+          <a href="#social-feed" class="nav-link" data-target="social-feed">Social Feeds</a>
+          <a href="#reviews" class="nav-link" data-target="reviews">Reviews</a>
+          <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <a href="tel:9330703521" class="btn btn-red btn-sm header-call-btn">
+            <span>📞 Call 9330703521</span>
+          </a>
+          <a href="#/admin" class="btn btn-outline-black btn-sm admin-entry-btn">
+            <span>Chef Admin</span>
+          </a>
+          <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="#deconstruct" class="nav-link">Crafting</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#reviews" class="nav-link">Reviews</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="#/admin" class="btn btn-secondary admin-toggle-btn">Chef Portal</a>
-      </div>
-      <button class="mobile-menu-toggle" id="mobile-toggle">
-        <span></span><span></span><span></span>
-      </button>
     </header>
 
-    <!-- Social Proof Sub-Header Banner -->
-    <div class="sub-header-banner">
-      <span>⭐ 4.9/5 Star Rated</span>
-      <span class="banner-divider">|</span>
-      <span>🍰 Over 5,000+ Cakes Delivered</span>
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <div class="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+          <img src="./bongo-logo-transparent.png" alt="Bongo Bakers" class="mobile-nav-logo">
+          <button class="close-mobile-nav" id="close-mobile-nav">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+          <a href="#/" class="mobile-nav-link active">Home</a>
+          <a href="#about" class="mobile-nav-link">About Us</a>
+          <a href="#products-section" class="mobile-nav-link">Menu & Cakes</a>
+          <a href="#social-feed" class="mobile-nav-link">Social Feeds</a>
+          <a href="#reviews" class="mobile-nav-link">Customer Reviews</a>
+          <a href="#contact" class="mobile-nav-link">Contact & Location</a>
+          <a href="#/admin" class="mobile-nav-link mobile-admin-link">Chef Admin Portal</a>
+        </div>
+        <div class="mobile-nav-contact">
+          <p><strong>Bongo Bakers Kolkata</strong></p>
+          <p>5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037</p>
+          <div class="mobile-contact-btns">
+            <a href="tel:9330703521" class="btn btn-red w-full">📞 Call 9330703521</a>
+            <a href="https://wa.me/919330703521" target="_blank" class="btn btn-whatsapp w-full">💬 WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Main Content Sections -->
-    <main>
-      <!-- Hero Section -->
-      <section id="hero" class="section hero-section">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title">Where Art Meets <span class="highlight-text">Sweetness</span></h1>
-            <p class="hero-description">Experience our premium, handcrafted cakes and pastries made with organic, high-quality ingredients and a touch of magical creativity.</p>
-            <div class="hero-buttons">
-              <a href="#gallery" class="btn btn-primary">Explore Our Creations</a>
-              <a href="#deconstruct" class="btn btn-outline">See How It's Made</a>
+    <!-- MAIN WRAPPER (Switches between Homepage and Product Detail Page) -->
+    <main id="main-content">
+      <!-- ================= HOMEPAGE VIEW ================= -->
+      <div id="home-view" class="page-view active">
+        <!-- Hero Image Banner Section -->
+        <section id="hero" class="hero-banner-section">
+          <div class="hero-banner-container">
+            <div class="hero-image-backdrop" style="background-image: url('hero-banner.jpg');">
+              <div class="hero-overlay-gradient"></div>
             </div>
-          </div>
-          <div class="hero-3d-placeholder">
-            <!-- This area is visually aligned with the fixed 3D canvas -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Deconstruction Section (Scroll-driven 3D action) -->
-      <section id="deconstruct" class="section deconstruct-section">
-        <div class="deconstruct-bg-glow"></div>
-        <div class="container deconstruct-container">
-          <!-- Text overlays that trigger at different scroll points -->
-          <div class="deconstruct-steps">
-            <div class="deconstruct-step" data-step="1">
-              <span class="step-num">01</span>
-              <h2>Premium Sponge Base</h2>
-              <p>Baked to soft, airy perfection using organic stone-ground flour, pasture-raised eggs, and rich Madagascar vanilla bean extract.</p>
-            </div>
-            <div class="deconstruct-step" data-step="2">
-              <span class="step-num">02</span>
-              <h2>Velvet Cream Filling</h2>
-              <p>Whipped double-cream infused with real strawberry reduction and premium white chocolate, layered meticulously for the ultimate melt-in-mouth texture.</p>
-            </div>
-            <div class="deconstruct-step" data-step="3">
-              <span class="step-num">03</span>
-              <h2>Strawberry Glaze & Toppings</h2>
-              <p>Finished with a glossy, vibrant berry glaze, hand-picked fresh organic strawberries, sweet macarons, and edible sprinkles.</p>
-            </div>
-          </div>
-          <div class="deconstruct-visual-space">
-            <!-- Left empty on desktop for the deconstructing cake -->
-            <div class="gallery-popouts-container" id="popouts-container">
-              <!-- Animated image cards will emerge here during deconstruction -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery Section -->
-      <section id="gallery" class="section gallery-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="badge">Our Creations</span>
-            <h2>Fresh From The Oven</h2>
-            <p>Browse through our handcrafted masterpieces. Customize and order your dream cake today.</p>
-          </div>
-          
-          <!-- Category Filters -->
-          <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All Treats</button>
-            <button class="filter-btn" data-filter="cake">Cakes</button>
-            <button class="filter-btn" data-filter="pastry">Pastries</button>
-            <button class="filter-btn" data-filter="macaron">Macarons & Donuts</button>
-          </div>
-
-          <!-- Cards Grid -->
-          <div class="gallery-grid" id="gallery-grid">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Reviews Section -->
-      <section id="reviews" class="section reviews-section">
-        <div class="container">
-          <div class="reviews-layout">
-            <div class="reviews-info">
-              <span class="badge">Guestbook</span>
-              <h2>Sweet Words from Sweet People</h2>
-              <p>We pride ourselves on taste and quality. Read reviews from our happy customers or share your own experience with us!</p>
+            <div class="container hero-content-wrapper">
+              <div class="hero-badge">
+                <span class="badge-dot"></span> Artisanal Bakery & Patisserie • Kolkata
+              </div>
+              <h1 class="hero-title">
+                Where Sweet Dreams Come True.<br>
+                <span class="hero-tagline-text">Be Deliciously Surprised...</span>
+              </h1>
+              <p class="hero-description">
+                From bespoke birthday theme cakes to handcrafted Belgian chocolates and warm oven cookies. Freshly baked every morning in Kolkata using 100% pure, natural ingredients.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#products-section" class="btn btn-red btn-lg">Explore Menu & Order</a>
+                <a href="https://wa.me/919330703521?text=Hi%20Bongo%20Bakers!%20I%20want%20to%20order%20a%20customized%20cake." target="_blank" rel="noopener" class="btn btn-white btn-lg">
+                  <span class="whatsapp-icon">💬</span> Order on WhatsApp
+                </a>
+              </div>
               
-              <!-- Review Stats Summary -->
-              <div class="rating-summary-box">
-                <div class="average-rating">
-                  <span class="rating-num">4.9</span>
-                  <span class="stars">★★★★★</span>
+              <!-- Quick Highlights Badges -->
+              <div class="hero-trust-bar">
+                <div class="trust-item">
+                  <span class="trust-icon">🎂</span>
+                  <div class="trust-text">
+                    <strong>Custom Theme Cakes</strong>
+                    <span>Weddings, Anniversaries & Birthdays</span>
+                  </div>
                 </div>
-                <p class="rating-count">Based on verified reviews</p>
+                <div class="trust-item">
+                  <span class="trust-icon">🌱</span>
+                  <div class="trust-text">
+                    <strong>100% Eggless Available</strong>
+                    <span>Pure Vegetarian Recipes Upon Request</span>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <span class="trust-icon">⚡</span>
+                  <div class="trust-text">
+                    <strong>Same-Day Kolkata Delivery</strong>
+                    <span>Call or WhatsApp 9330703521</span>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="reviews-feed-container">
-              <!-- Comment Submission Form -->
-              <form id="review-form" class="review-form">
-                <h3>Leave a Review</h3>
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="review-name">Name</label>
-                    <input type="text" id="review-name" required placeholder="Your name">
+        <!-- About Us Section (Replacing "Crafting") -->
+        <section id="about" class="section about-section">
+          <div class="container">
+            <div class="about-grid">
+              <div class="about-image-column">
+                <div class="about-image-wrapper">
+                  <img src="./about-craft.jpg" alt="Bongo Bakers Pastry Chef Crafting Cakes in Kolkata" class="about-img">
+                  <div class="about-experience-badge">
+                    <span class="exp-number">Kolkata's</span>
+                    <span class="exp-text">Artisanal Bakery</span>
                   </div>
-                  <div class="form-group">
-                    <label>Rating</label>
-                    <div class="rating-select" id="rating-select">
-                      <span data-val="5" class="star-btn">★</span>
-                      <span data-val="4" class="star-btn">★</span>
-                      <span data-val="3" class="star-btn">★</span>
-                      <span data-val="2" class="star-btn">★</span>
-                      <span data-val="1" class="star-btn">★</span>
+                </div>
+              </div>
+              <div class="about-text-column">
+                <div class="section-tag">About Bongo Bakers</div>
+                <h2 class="section-heading">Baking Sweet Memories For Every Celebration</h2>
+                <p class="about-lead">
+                  Nestled in the heart of North Kolkata at <strong>5/2/4, Ground Floor, Raja Manindra Road, Kolkata - 700 037</strong>, Bongo Bakers was born out of a profound passion for exquisite confectionery and authentic local love.
+                </p>
+                <p class="about-body">
+                  Our master bakers craft every single cake, pastry, and chocolate truffle with meticulous artistry. Whether it's a grand multi-tier Bengali wedding celebration cake, a playful superhero or cartoon theme cake for your child's birthday, or a box of melt-in-mouth artisanal cookies, we believe your sweet treats should look breathtaking and taste extraordinary.
+                </p>
+
+                <div class="about-pillars">
+                  <div class="pillar-card">
+                    <div class="pillar-icon">🍓</div>
+                    <div class="pillar-content">
+                      <h4>Pure & Natural Ingredients</h4>
+                      <p>Fresh cream, real cocoa, hand-picked seasonal fruits, and Madagascar vanilla with no artificial shortcuts.</p>
+                    </div>
+                  </div>
+                  <div class="pillar-card">
+                    <div class="pillar-icon">🎨</div>
+                    <div class="pillar-content">
+                      <h4>Bespoke Customization</h4>
+                      <p>Tell us your vision! We turn your sketches, photos, and favorite themes into edible celebration art.</p>
+                    </div>
+                  </div>
+                  <div class="pillar-card">
+                    <div class="pillar-icon">📍</div>
+                    <div class="pillar-content">
+                      <h4>Local Kolkata Heritage</h4>
+                      <p>Serving sweet lovers across Kolkata with prompt doorstep delivery and warm personalized customer care.</p>
                     </div>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="review-text">Review</label>
-                  <textarea id="review-text" required rows="3" placeholder="Tell us how much you loved our treats..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-full">Submit Review</button>
-                <p class="form-note">⚠️ Reviews are moderated and will appear publicly once approved by our chefs.</p>
-              </form>
 
-              <!-- Reviews Feed -->
-              <div class="reviews-feed" id="reviews-feed">
-                <!-- Dynamically populated with approved comments -->
+                <div class="about-cta">
+                  <a href="tel:9330703521" class="btn btn-red">📞 Speak With Our Chef: 9330703521</a>
+                  <a href="#contact" class="btn btn-outline-black">Visit Our Bakery</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="container footer-container">
-        <div class="footer-brand">
-          <span class="logo-text">🍰 Bakingo</span>
-          <p>Delivering premium sweet joy since 2024.</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h4>Explore</h4>
-            <a href="#hero">Home</a>
-            <a href="#deconstruct">Crafting Process</a>
-            <a href="#gallery">Creations</a>
-          </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <p>📧 hello@bakingo.com</p>
-            <p>📞 +1 (555) 123-BAKE</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Bakingo Bakery. Designed for sweet lovers.</p>
-      </div>
-    </footer>
+        <!-- Product Grid Section with Category Filter, Search & Pagination -->
+        <section id="products-section" class="section products-section">
+          <div class="container">
+            <div class="section-header text-center">
+              <span class="section-tag">Our Creations</span>
+              <h2 class="section-heading">Handcrafted Bakery Delicacies</h2>
+              <p class="section-subheading">Choose your favorite cake or treat. Click to view details, customize weight, and order directly on WhatsApp.</p>
+            </div>
 
-    <!-- Admin Panel Overlay (SPA Screen) -->
-    <div id="admin-panel" class="admin-panel">
-      <div class="admin-header-bar">
-        <h2>👨‍🍳 Bakingo Chef Control Center</h2>
-        <a href="#" class="btn btn-outline close-admin-btn">Exit Admin</a>
-      </div>
-
-      <!-- Admin Login Box -->
-      <div id="admin-login-box" class="admin-login-box">
-        <h3>Chef Authentication</h3>
-        <p class="login-instructions">Please enter your bakery credentials to moderate comments and manage gallery photos.</p>
-        <form id="admin-login-form">
-          <div class="form-group">
-            <label for="admin-username">Username</label>
-            <input type="text" id="admin-username" autocomplete="username" required placeholder="Username (Hint: admin)">
-          </div>
-          <div class="form-group">
-            <label for="admin-password">Password</label>
-            <input type="password" id="admin-password" autocomplete="current-password" required placeholder="Password (Hint: bakingo-sweet-admin)">
-          </div>
-          <div id="login-error" class="login-error-msg"></div>
-          <button type="submit" class="btn btn-primary w-full">Access Dashboard</button>
-        </form>
-      </div>
-
-      <!-- Admin Dashboard Content (Hidden by default until logged in) -->
-      <div id="admin-dashboard-content" class="admin-dashboard-content hidden">
-        <div class="admin-tabs">
-          <button class="admin-tab-btn active" data-tab="photo-tab">Manage Gallery & 3D Popouts</button>
-          <button class="admin-tab-btn" data-tab="comment-tab">
-            Moderate Reviews 
-            <span class="badge-count" id="pending-count-badge">0</span>
-          </button>
-        </div>
-
-        <!-- TAB 1: Photo & Product Management -->
-        <div id="photo-tab" class="admin-tab-content active">
-          <div class="tab-header">
-            <h3>Gallery & 3D Creations</h3>
-            <p>Upload new pastry pictures, delete existing ones, or choose which creations "pop out" during the 3D scroll deconstruction.</p>
-          </div>
-          
-          <div class="admin-photo-grid-layout">
-            <!-- Photo Upload Form -->
-            <form id="photo-upload-form" class="photo-upload-form">
-              <h4>Add New Treat</h4>
-              <div class="form-group">
-                <label for="photo-title">Title</label>
-                <input type="text" id="photo-title" required placeholder="e.g. Royal Strawberry Cake">
+            <!-- Filter Controls & Search Bar -->
+            <div class="catalog-controls-container">
+              <div class="category-filters-tabs" id="category-filters">
+                <button class="filter-tab active" data-category="all">All Delights</button>
+                <button class="filter-tab" data-category="classic-cakes">Classic Cakes</button>
+                <button class="filter-tab" data-category="theme-cakes">Theme & Celebration</button>
+                <button class="filter-tab" data-category="seasonal-fruit">Seasonal Fruit</button>
+                <button class="filter-tab" data-category="chocolates">Chocolates</button>
+                <button class="filter-tab" data-category="cookies-desserts">Cookies & Desserts</button>
               </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="photo-price">Price (₹)</label>
-                  <input type="number" id="photo-price" step="0.01" required placeholder="e.g. 450.00">
+
+              <div class="catalog-search-sort">
+                <div class="search-box">
+                  <span class="search-icon">🔍</span>
+                  <input type="text" id="catalog-search-input" placeholder="Search by cake name or flavor...">
                 </div>
-                <div class="form-group">
-                  <label for="photo-category">Category</label>
-                  <select id="photo-category" required>
-                    <option value="cake">Cake</option>
-                    <option value="pastry">Pastry</option>
-                    <option value="macaron">Macaron & Donut</option>
+                <div class="sort-box">
+                  <select id="catalog-sort-select" aria-label="Sort products">
+                    <option value="default">Featured / Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A to Z</option>
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="photo-desc">Description</label>
-                <textarea id="photo-desc" required rows="2" placeholder="Describe the flavors..."></textarea>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="products-grid" id="products-grid">
+              <!-- Dynamically rendered by JavaScript -->
+            </div>
+
+            <!-- Pagination Bar -->
+            <div class="pagination-container" id="pagination-container">
+              <!-- Dynamically populated (e.g. Prev, 1, 2, 3, Next) -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Social Media Feeds Section -->
+        <section id="social-feed" class="section social-feed-section">
+          <div class="container">
+            <div class="section-header text-center">
+              <span class="section-tag">Community & Feeds</span>
+              <h2 class="section-heading">Follow Bongo Bakers On Social Media</h2>
+              <p class="section-subheading">Stay tuned with our latest oven-fresh bakes, customer celebrations, and behind-the-scenes magic from Kolkata!</p>
+              
+              <div class="social-channels-bar">
+                <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" class="social-channel-btn ig-btn">
+                  <span class="icon">📷</span> Follow @bongobakerskolkata
+                </a>
+                <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" class="social-channel-btn fb-btn">
+                  <span class="icon">👍</span> Like on Facebook
+                </a>
               </div>
-              <div class="form-group">
-                <label for="photo-file">Upload Image</label>
-                <div class="file-drop-zone">
-                  <input type="file" id="photo-file" accept="image/*" required>
-                  <div class="drop-zone-text">
-                    <span>📁 Click to choose image</span>
-                    <p class="file-preview-text" id="file-name-preview">Max size 2MB</p>
+            </div>
+
+            <!-- Social Feeds Grid (Placeholders populated via JS / Admin pasted links) -->
+            <div class="social-feed-grid" id="social-feed-grid">
+              <!-- Dynamically rendered from storage -->
+            </div>
+
+            <div class="social-feed-note">
+              <span>💡 Are you an admin? You can share new Instagram / Facebook links directly through the <a href="#/admin">Chef Admin Dashboard</a>.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Customer Reviews / Guestbook Section -->
+        <section id="reviews" class="section reviews-section">
+          <div class="container">
+            <div class="reviews-split-layout">
+              <div class="reviews-summary-side">
+                <span class="section-tag">Sweet Words</span>
+                <h2 class="section-heading">What Kolkata Loves About Us</h2>
+                <p class="reviews-desc">
+                  Every slice tells a story of celebration. Read authentic experiences from our wonderful customers or leave your feedback.
+                </p>
+
+                <div class="rating-overview-card">
+                  <div class="score-number">4.9</div>
+                  <div class="score-stars">★★★★★</div>
+                  <div class="score-caption">Based on 120+ verified Kolkata reviews</div>
+                  <div class="rating-breakdown">
+                    <div class="breakdown-row"><span>Taste & Freshness</span><strong>5.0 ★</strong></div>
+                    <div class="breakdown-row"><span>Cake Customization</span><strong>4.9 ★</strong></div>
+                    <div class="breakdown-row"><span>Timely Delivery</span><strong>4.8 ★</strong></div>
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary w-full">Upload & Add to Bakery</button>
-            </form>
 
-            <!-- Current Photos List -->
-            <div class="admin-items-list-container">
-              <h4>Current Creations</h4>
-              <div class="admin-items-list" id="admin-items-list">
-                <!-- Dynamically populated -->
+              <div class="reviews-feed-side">
+                <!-- Submit Review Form -->
+                <form id="public-review-form" class="review-box-form">
+                  <h3>Leave Your Review</h3>
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="rev-user-name">Your Name</label>
+                      <input type="text" id="rev-user-name" required placeholder="e.g. Sourav Mukherjee">
+                    </div>
+                    <div class="form-group">
+                      <label>Your Rating</label>
+                      <div class="star-rating-picker" id="star-picker">
+                        <span class="star-item selected" data-val="1">★</span>
+                        <span class="star-item selected" data-val="2">★</span>
+                        <span class="star-item selected" data-val="3">★</span>
+                        <span class="star-item selected" data-val="4">★</span>
+                        <span class="star-item selected" data-val="5">★</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="rev-user-comment">Your Experience</label>
+                    <textarea id="rev-user-comment" required rows="3" placeholder="Tell us how much you enjoyed our cake or treat..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-red w-full">Submit My Review</button>
+                  <p class="review-notice">Reviews appear publicly once verified by our bakery staff.</p>
+                </form>
+
+                <!-- Reviews Stream -->
+                <div class="reviews-stream-container" id="reviews-stream">
+                  <!-- Dynamically rendered -->
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- TAB 2: Comment Moderation -->
-        <div id="comment-tab" class="admin-tab-content">
-          <div class="tab-header">
-            <h3>Review Moderation</h3>
-            <p>Review customer feedbacks. Approved comments will show up in the public guestbook section instantly.</p>
+        <!-- Location & Contact Section -->
+        <section id="contact" class="section contact-section">
+          <div class="container">
+            <div class="contact-card-box">
+              <div class="contact-info-col">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-heading">Visit Our Kolkata Bakery</h2>
+                <p class="contact-lead">Order custom celebratory cakes, pick up fresh morning pastries, or reach out anytime.</p>
+
+                <div class="contact-detail-items">
+                  <div class="contact-item">
+                    <div class="ci-icon">📍</div>
+                    <div class="ci-text">
+                      <strong>Bakery Address</strong>
+                      <p>5/2/4, Ground Floor, Raja Manindra Road,<br>Kolkata - 700 037, West Bengal, India</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="ci-icon">📞</div>
+                    <div class="ci-text">
+                      <strong>Direct Phone Call</strong>
+                      <p><a href="tel:9330703521" class="contact-link">9330703521</a></p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="ci-icon">💬</div>
+                    <div class="ci-text">
+                      <strong>WhatsApp Order Line</strong>
+                      <p><a href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers!" target="_blank" class="contact-link">9330703521</a> (Quick WhatsApp Inquiry)</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="ci-icon">🕒</div>
+                    <div class="ci-text">
+                      <strong>Bakery Opening Hours</strong>
+                      <p>Monday – Sunday: 10:00 AM – 10:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-social-pills">
+                  <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" class="pill-btn">
+                    <span>Facebook: /bongobakerskolkata</span>
+                  </a>
+                  <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" class="pill-btn">
+                    <span>Instagram: /bongobakerskolkata</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-map-col">
+                <div class="map-container-frame">
+                  <iframe 
+                    title="Bongo Bakers Kolkata Location Map"
+                    src="https://maps.google.com/maps?q=Raja+Manindra+Road,+Kolkata+700037&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="moderation-list" id="moderation-list">
-            <!-- Dynamically populated -->
+        </section>
+      </div>
+
+      <!-- ================= PRODUCT DETAIL PAGE VIEW (IN SAME WINDOW) ================= -->
+      <div id="product-detail-view" class="page-view">
+        <div class="container product-detail-container">
+          <!-- Back Button & Breadcrumbs -->
+          <div class="detail-navigation-bar">
+            <a href="#products-section" class="btn btn-outline-black btn-sm" id="detail-back-btn">
+              ← Back to All Products
+            </a>
+            <div class="detail-breadcrumbs" id="detail-breadcrumbs">
+              <!-- Breadcrumb dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- Product Details Grid -->
+          <div class="product-detail-layout" id="product-detail-card">
+            <!-- Dynamically populated by JS: Image, Title, Price, Weight selector, Custom Message, WhatsApp CTA -->
+          </div>
+
+          <!-- Related Products Section (Carousel / Static Grid) -->
+          <div class="related-products-section">
+            <div class="related-header">
+              <span class="section-tag">You May Also Like</span>
+              <h3 class="related-title">More Sweet Delicacies</h3>
+              <p class="related-sub">Handcrafted favorites recommended for your special occasion.</p>
+            </div>
+            
+            <div class="related-products-carousel-wrapper">
+              <button class="carousel-nav-btn prev-btn" id="related-prev-btn" aria-label="Previous related products">‹</button>
+              <div class="related-products-track" id="related-products-track">
+                <!-- Dynamically rendered related product cards -->
+              </div>
+              <button class="carousel-nav-btn next-btn" id="related-next-btn" aria-label="Next related products">›</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <!-- Detail Modal (for gallery click) -->
-    <div id="details-modal" class="modal">
-      <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <div class="modal-body-layout">
-          <div class="modal-image-side">
-            <img id="modal-img" src="" alt="">
+    <!-- Comprehensive Footer Structure -->
+    <footer class="main-footer">
+      <div class="container footer-content-grid">
+        <!-- Col 1: Brand Info & About -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo-wrap">
+            <img src="./bongo-logo-transparent.png" alt="Bongo Bakers Logo" class="footer-logo">
           </div>
-          <div class="modal-info-side">
-            <span class="badge" id="modal-badge">Cake</span>
-            <h2 id="modal-title">Treat Name</h2>
-            <p class="modal-price" id="modal-price">₹0.00</p>
-            <p class="modal-desc" id="modal-desc">Treat description goes here.</p>
-            <div class="modal-features">
-              <div class="feature-tag">🍃 100% Organic</div>
-              <div class="feature-tag">🥚 Cage-Free Eggs</div>
-              <div class="feature-tag">🍓 Fresh Fruits</div>
+          <p class="footer-tagline">"Be Deliciously Surprised..."</p>
+          <p class="footer-bio">
+            Kolkata's premier artisanal bakery specializing in custom celebration cakes, theme cakes, Belgian chocolates, and fresh cookies baked with love and premium ingredients.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" aria-label="Bongo Bakers Facebook" class="social-icon-btn">
+              <span class="icon">f</span>
+            </a>
+            <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" aria-label="Bongo Bakers Instagram" class="social-icon-btn">
+              <span class="icon">📸</span>
+            </a>
+            <a href="https://wa.me/919330703521" target="_blank" rel="noopener" aria-label="Bongo Bakers WhatsApp" class="social-icon-btn">
+              <span class="icon">💬</span>
+            </a>
+            <a href="tel:9330703521" aria-label="Call Bongo Bakers" class="social-icon-btn">
+              <span class="icon">📞</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#about">About Bongo Bakers</a></li>
+            <li><a href="#products-section">Menu & Online Catalog</a></li>
+            <li><a href="#social-feed">Social Media Updates</a></li>
+            <li><a href="#reviews">Customer Feedback</a></li>
+            <li><a href="#contact">Location & Timings</a></li>
+            <li><a href="#/admin">Chef Management Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Specialities</h4>
+          <ul class="footer-links-list">
+            <li><a href="#products-section">Classic Chocolate Truffle</a></li>
+            <li><a href="#products-section">Bengali Wedding Theme Cakes</a></li>
+            <li><a href="#products-section">2-Tier Birthday Cakes</a></li>
+            <li><a href="#products-section">Seasonal Fresh Fruit Cakes</a></li>
+            <li><a href="#products-section">Handcrafted Chocolates</a></li>
+            <li><a href="#products-section">Pure Eggless Cakes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Verified Contact Information -->
+        <div class="footer-col footer-contact-col">
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item">
+            <span class="fci-icon">📍</span>
+            <span>5/2/4, Gr. Fl., Raja Manindra Rd.,<br>Kolkata - 700 037</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="fci-icon">📞</span>
+            <a href="tel:9330703521" class="fci-link">9330703521</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="fci-icon">💬</span>
+            <a href="https://wa.me/919330703521" target="_blank" rel="noopener" class="fci-link">9330703521 (WhatsApp)</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="fci-icon">🌐</span>
+            <span>FB/IG: <strong>/bongobakerskolkata</strong></span>
+          </div>
+          <div class="footer-action-btn-wrap">
+            <a href="https://wa.me/919330703521?text=Hi%20Bongo%20Bakers!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-red btn-sm w-full">
+              Instant WhatsApp Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom-bar">
+        <div class="container footer-bottom-flex">
+          <p>&copy; 2026 Bongo Bakers Kolkata. All Rights Reserved. Crafted with sweet passion.</p>
+          <div class="footer-legal-links">
+            <span>Freshly Baked in Kolkata</span>
+            <span>•</span>
+            <a href="#/admin">Staff Login</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chef Admin Panel Overlay (SPA Screen) -->
+    <div id="admin-panel" class="admin-panel-overlay">
+      <div class="admin-panel-window">
+        <div class="admin-panel-top">
+          <div class="admin-brand-title">
+            <img src="./bongo-logo-transparent.png" alt="Bongo Bakers" class="admin-top-logo">
+            <h2>Bongo Bakers Chef Control Center</h2>
+          </div>
+          <a href="#/" class="btn btn-outline-black btn-sm" id="close-admin-btn">Exit Admin</a>
+        </div>
+
+        <!-- Login Card -->
+        <div id="admin-login-box" class="admin-login-container">
+          <div class="admin-login-card">
+            <h3>Staff Authentication</h3>
+            <p>Enter your bakery credentials to manage products, share social media feed links, and moderate reviews.</p>
+            <form id="admin-login-form">
+              <div class="form-group">
+                <label for="admin-user-input">Username</label>
+                <input type="text" id="admin-user-input" required autocomplete="username" placeholder="Username (Default: admin)">
+              </div>
+              <div class="form-group">
+                <label for="admin-pass-input">Password</label>
+                <input type="password" id="admin-pass-input" required autocomplete="current-password" placeholder="Password (Default: bakingo-sweet-admin)">
+              </div>
+              <div id="admin-login-error" class="login-error-alert"></div>
+              <button type="submit" class="btn btn-red w-full">Login to Control Center</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Logged-in Dashboard -->
+        <div id="admin-dashboard-content" class="admin-dashboard-wrapper hidden">
+          <div class="admin-navigation-tabs">
+            <button class="admin-nav-tab active" data-tab="tab-products">Manage Products & Menu</button>
+            <button class="admin-nav-tab" data-tab="tab-social">
+              Social Media Feed Manager
+              <span class="tab-badge" id="social-count-badge">0</span>
+            </button>
+            <button class="admin-nav-tab" data-tab="tab-reviews">
+              Review Moderation
+              <span class="tab-badge" id="pending-reviews-badge">0</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: Products Catalogue -->
+          <div id="tab-products" class="admin-tab-pane active">
+            <div class="admin-pane-header">
+              <h3>Bakery Creations Catalog</h3>
+              <p>Add new cakes, pastries, or chocolates. Update prices, descriptions, and categories.</p>
             </div>
-            <button class="btn btn-primary w-full order-now-btn">Order This Creation</button>
+            
+            <div class="admin-two-col-layout">
+              <!-- Add Product Form -->
+              <form id="admin-product-form" class="admin-editor-form">
+                <h4>Add New Treat</h4>
+                <div class="form-group">
+                  <label for="new-prod-title">Product Title</label>
+                  <input type="text" id="new-prod-title" required placeholder="e.g. Royal Strawberry Velvet">
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="new-prod-price">Base Price (₹)</label>
+                    <input type="number" id="new-prod-price" step="1" required placeholder="e.g. 599">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-prod-cat">Category</label>
+                    <select id="new-prod-cat" required>
+                      <option value="classic-cakes">Classic Cakes</option>
+                      <option value="theme-cakes">Theme Cakes</option>
+                      <option value="seasonal-fruit">Seasonal Fruit Cakes</option>
+                      <option value="chocolates">Chocolates</option>
+                      <option value="cookies-desserts">Cookies & Desserts</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="new-prod-desc">Description & Flavors</label>
+                  <textarea id="new-prod-desc" rows="2" required placeholder="Layer details, flavor notes, sponge textures..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="new-prod-file">Upload Image</label>
+                  <div class="custom-file-drop">
+                    <input type="file" id="new-prod-file" accept="image/*">
+                    <span id="file-chosen-status">Choose product image (Optional, Max 2MB)</span>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-red w-full">Save Treat to Catalog</button>
+              </form>
+
+              <!-- Existing Products List -->
+              <div class="admin-existing-list-wrap">
+                <h4>Current Menu Items (<span id="total-prod-count">0</span>)</h4>
+                <div class="admin-items-scroll-list" id="admin-products-list">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: Social Media Feed Manager -->
+          <div id="tab-social" class="admin-tab-pane">
+            <div class="admin-pane-header">
+              <h3>Social Media Feed Manager</h3>
+              <p>Manually share Facebook and Instagram posts to display on the homepage feed by pasting their share links!</p>
+            </div>
+
+            <div class="admin-two-col-layout">
+              <!-- Add Social Share Form -->
+              <form id="admin-social-form" class="admin-editor-form">
+                <h4>Share New Social Post</h4>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="social-platform">Platform</label>
+                    <select id="social-platform" required>
+                      <option value="instagram">Instagram</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="youtube">YouTube</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="social-date">Post Date</label>
+                    <input type="text" id="social-date" placeholder="e.g. Today / Sep 12">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="social-share-link">Share Link (Post URL)</label>
+                  <input type="url" id="social-share-link" required placeholder="e.g. https://www.instagram.com/p/C...">
+                  <small class="form-hint">Paste the URL from Instagram or Facebook share button.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="social-caption">Caption / Headline</label>
+                  <textarea id="social-caption" rows="2" required placeholder="e.g. Fresh Bengali Wedding Cake delivered today in Kolkata! 🎂✨"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="social-img-url">Photo / Thumbnail URL (Optional)</label>
+                  <input type="url" id="social-img-url" placeholder="https://... (or leave empty for default badge)">
+                </div>
+
+                <button type="submit" class="btn btn-red w-full">Publish to Homepage Feed</button>
+              </form>
+
+              <!-- Current Social Feeds List -->
+              <div class="admin-existing-list-wrap">
+                <h4>Active Feeds on Homepage</h4>
+                <div class="admin-items-scroll-list" id="admin-social-list">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Review Moderation -->
+          <div id="tab-reviews" class="admin-tab-pane">
+            <div class="admin-pane-header">
+              <h3>Customer Review Moderation</h3>
+              <p>Review and approve incoming customer ratings before they appear on the homepage guestbook.</p>
+            </div>
+
+            <div class="admin-moderation-container" id="admin-moderation-list">
+              <!-- Dynamically populated -->
+            </div>
           </div>
         </div>
       </div>
