@@ -1303,7 +1303,7 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
 window.addEventListener('scroll', () => {
   if (!homeView.classList.contains('active')) return;
   const pos = window.scrollY + 120;
-  const sections = ['hero', 'about', 'products-section', 'social-feed', 'reviews', 'contact'];
+  const sections = ['hero', 'products-section', 'social-feed', 'reviews', 'contact'];
 
   sections.forEach(id => {
     const sec = document.getElementById(id);
