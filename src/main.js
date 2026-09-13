@@ -604,7 +604,6 @@ function renderProductGrid() {
           <span class="card-reviews">(${item.reviewsCount} reviews)</span>
         </div>
         <h3 class="card-title">${item.title}</h3>
-        <p class="card-desc">${item.desc}</p>
         <div class="card-action-bar">
           <div class="card-price-block">
             <span class="card-price-label">Starting at</span>

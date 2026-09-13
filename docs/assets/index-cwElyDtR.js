@@ -18,7 +18,6 @@
           <span class="card-reviews">(${e.reviewsCount} reviews)</span>
         </div>
         <h3 class="card-title">${e.title}</h3>
-        <p class="card-desc">${e.desc}</p>
         <div class="card-action-bar">
           <div class="card-price-block">
             <span class="card-price-label">Starting at</span>
