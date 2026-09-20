@@ -1,665 +1,1896 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bongo Bakers Kolkata | Be Deliciously Surprised...</title>
-    <meta name="description" content="Bongo Bakers Kolkata - Handcrafted celebration cakes, theme cakes, artisanal chocolates, and fresh daily bakes at 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037. Order via WhatsApp 9330703521." />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/bongo-logo.png" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Main Style -->
-    <link rel="stylesheet" href="/src/style.css">
-  </head>
-  <body>
-    <!-- Top Announcement & Quick Contact Bar -->
-    <div class="top-bar">
-      <div class="container top-bar-container">
-        <div class="top-bar-left">
-          <span class="delivery-pill">🚀 Delivering Joy Across Kolkata</span>
-          <span class="address-pill">📍 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037</span>
-        </div>
-        <div class="top-bar-right">
-          <a href="tel:9330703521" class="top-link" id="top-phone-link">
-            <span class="icon">📞</span> 9330703521
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Bongo Bakers | Handcrafted Cakes, Artisanal Chocolates &amp; Fresh Bakes</title>
+  <meta name="description" content="Bongo Bakers - Handcrafted theme cakes, classic cakes, artisanal chocolates, and oven-fresh daily bakes. Order via WhatsApp 9330703521 or visit 5/2/4 Raja Manindra Rd, Kolkata." />
+  <link rel="icon" type="image/png" href="./images/cakes/bb-logo-unit.png" />
+
+  <!-- Google Fonts: Epilogue, Plus Jakarta Sans, Playfair Display -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS with custom theme config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#ffddb3",
+            "on-secondary-fixed": "#1c1b1b",
+            "error": "#ba1a1a",
+            "tertiary": "#7e5200",
+            "surface-dim": "#dbdad6",
+            "outline": "#926f6b",
+            "primary-fixed-dim": "#ffb4ab",
+            "secondary": "#5f5e5e",
+            "outline-variant": "#e7bdb8",
+            "on-surface-variant": "#5d3f3c",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#e5e2e1",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed-variant": "#633f00",
+            "on-primary-fixed-variant": "#93000d",
+            "surface": "#fbf9f5",
+            "on-tertiary-fixed": "#291800",
+            "on-primary-container": "#fffafa",
+            "tertiary-container": "#9f6900",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb951",
+            "surface-tint": "#c00014",
+            "background": "#fbf9f5",
+            "surface-container": "#efeeea",
+            "inverse-on-surface": "#f2f0ed",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae8e4",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#ffdad6",
+            "on-background": "#1b1c1a",
+            "on-secondary-fixed-variant": "#474746",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-bright": "#fbf9f5",
+            "on-secondary-container": "#636262",
+            "primary": "#ba0013",
+            "inverse-primary": "#ffb4ab",
+            "surface-variant": "#e4e2de",
+            "surface-container-highest": "#e4e2de",
+            "secondary-container": "#e2dfde",
+            "on-surface": "#1b1c1a",
+            "primary-container": "#e31e24",
+            "inverse-surface": "#30312e",
+            "on-tertiary-container": "#fffaff",
+            "on-primary-fixed": "#410002",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f5f3ef"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter-lg": "2rem",
+            "gutter-md": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2.5rem",
+            "margin-md": "2rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "margin-lg": "3.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Epilogue", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Epilogue", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Epilogue", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "tagline-accent": ["Playfair Display", "serif"],
+            "display-hero-mobile": ["Epilogue", "sans-serif"],
+            "display-hero": ["Epilogue", "sans-serif"],
+            "headline-sm": ["Epilogue", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+            "tagline-accent": ["18px", { "lineHeight": "26px", "fontWeight": "500" }],
+            "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .kolkata-pattern {
+      background-color: #fbf9f5;
+      background-image: radial-gradient(#e31e24 0.65px, transparent 0.65px), radial-gradient(#ba0013 0.65px, #fbf9f5 0.65px);
+      background-size: 26px 26px;
+      background-position: 0 0, 13px 13px;
+      opacity: 0.98;
+    }
+    .festive-red-card {
+      background: linear-gradient(135deg, #ba0013 0%, #e31e24 100%);
+    }
+    .warm-glow {
+      box-shadow: 0 10px 30px -5px rgba(227, 30, 36, 0.18), 0 4px 10px -2px rgba(27, 28, 26, 0.05);
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col font-body-md">
+
+  <!-- Top Announcement Bar (Kolkata Local Connect) -->
+  <div class="bg-on-background text-surface-container-lowest py-2.5 px-4 text-xs font-medium tracking-wide">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-container text-on-primary uppercase tracking-wider">
+          Fresh Morning Bakes
+        </span>
+        <span class="text-surface-dim">📍 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037</span>
+      </div>
+      <div class="flex items-center space-x-6 text-surface-dim">
+        <a class="hover:text-primary-fixed transition-colors flex items-center gap-1" href="tel:9330703521">
+          <span class="material-symbols-outlined text-sm">call</span>
+          <span>9330703521</span>
+        </a>
+        <span class="hidden md:inline text-secondary">|</span>
+        <span class="hidden md:flex items-center gap-1 text-tertiary-fixed">
+          <span class="material-symbols-outlined text-sm">schedule</span>
+          8:00 AM – 10:00 PM (Daily)
+        </span>
+        <span class="hidden md:inline text-secondary">|</span>
+        <div class="flex items-center space-x-2">
+          <span class="text-[11px] text-surface-dim">Follow our sweetest stories:</span>
+          <a class="hover:text-white transition-colors" href="https://facebook.com/bongobakerskolkata" target="_blank" title="Facebook">
+            <span class="text-xs font-bold bg-surface-variant text-on-background px-1.5 py-0.5 rounded">f</span>
           </a>
-          <span class="top-divider">|</span>
-          <a href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers!%20I%20would%20like%20to%20order%20a%20cake." target="_blank" rel="noopener" class="top-link whatsapp-pill" id="top-whatsapp-link">
-            <span class="icon">💬</span> WhatsApp Us
+          <a class="hover:text-white transition-colors" href="https://instagram.com/bongobakerskolkata" target="_blank" title="Instagram">
+            <span class="text-xs font-bold bg-surface-variant text-on-background px-1.5 py-0.5 rounded">ig</span>
           </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Sticky Main Header -->
-    <header class="main-header" id="header">
-      <div class="container header-container">
-        <a href="#/" class="brand-logo" id="brand-logo-link">
-          <img src="/bongo-logo-transparent.png" alt="Bongo Bakers Kolkata" class="logo-image" id="site-logo">
+  <!-- Shared Component: TopNavBar -->
+  <header class="bg-surface-container-lowest docked full-width top-0 sticky z-50 border-b border-outline-variant shadow-sm">
+    <div class="flex flex-col w-full max-w-7xl mx-auto px-4 md:px-margin-md">
+      <div class="flex items-center justify-between py-2 sm:py-3 gap-3 md:gap-4">
+        <!-- Brand Identity & Enlarged Logo from Bakery Collection Assets -->
+        <a class="flex items-center gap-3 group shrink-0" href="#top" title="Bongo Bakers">
+          <img alt="Bongo Bakers Official Logo" class="h-20 sm:h-24 w-auto object-contain transition-transform duration-200 group-hover:scale-105 filter drop-shadow-sm" src="./images/cakes/bb-logo-unit.png"/>
+          <div class="hidden sm:flex flex-col">
+            <div class="flex items-baseline gap-1">
+              <span class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight font-headline-lg">Bongo</span>
+              <span class="text-2xl sm:text-3xl font-extrabold text-on-background tracking-tight font-headline-lg">Bakers</span>
+            </div>
+            <span class="text-xs sm:text-sm font-tagline-accent italic text-primary font-medium tracking-wide">Be Deliciously Surprised...</span>
+          </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="nav-links" id="main-nav">
-          <a href="#/" class="nav-link active" data-target="home">Home</a>
-          <a href="#products-section" class="nav-link" data-target="products-section">Menu & Cakes</a>
-          <a href="#social-feed" class="nav-link" data-target="social-feed">Social Feeds</a>
-          <a href="#reviews" class="nav-link" data-target="reviews">Reviews</a>
-          <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+        <!-- Desktop Navigation Links & Dropdown Menu -->
+        <nav class="hidden lg:flex items-center space-x-5 text-label-lg font-label-lg">
+          <!-- Dropdown Menu: Cakes & Menu -->
+          <div class="relative group" id="cakes-dropdown-container">
+            <button id="cakes-dropdown-btn" class="flex items-center gap-1.5 text-on-surface font-semibold hover:text-primary py-2 transition-colors duration-150 group-hover:text-primary focus:outline-none" aria-expanded="false" aria-haspopup="true">
+              <span class="material-symbols-outlined text-lg text-primary">cake</span>
+              <span>Cakes &amp; Menu</span>
+              <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+
+            <!-- Dropdown Card -->
+            <div id="cakes-dropdown-menu" class="absolute left-0 top-full mt-0 w-72 bg-surface-container-lowest rounded-2xl shadow-2xl border-2 border-outline-variant py-2.5 z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 translate-y-2 group-hover:translate-y-0">
+              <div class="px-3.5 py-1 border-b border-outline-variant/40 mb-1 flex items-center justify-between">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-secondary">Browse Daily Bakes</span>
+                <span class="text-[10px] bg-primary-fixed text-primary px-1.5 py-0.5 rounded font-bold">Fresh Daily</span>
+              </div>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#celebration-cakes" data-category-target="all">
+                <span class="w-8 h-8 rounded-xl bg-primary-fixed text-primary flex items-center justify-center text-base font-bold shadow-xs">🎂</span>
+                <div>
+                  <div class="font-bold">All Signature Cakes</div>
+                  <div class="text-[10px] text-secondary font-normal">Full 16+ confectionery treats</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#theme-cakes" data-category-target="theme">
+                <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-base font-bold shadow-xs">👑</span>
+                <div>
+                  <div class="font-bold text-primary">Theme &amp; Wedding Cakes</div>
+                  <div class="text-[10px] text-secondary font-normal">Bengali Biye, Elsa, Cricket, Milestones</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#classic-cakes" data-category-target="classic">
+                <span class="w-8 h-8 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center text-base font-bold shadow-xs">🍫</span>
+                <div>
+                  <div class="font-bold">Classic Cakes</div>
+                  <div class="text-[10px] text-secondary font-normal">Black Forest, Belgian Truffle, Butterscotch</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#seasonal-fruit" data-category-target="seasonal">
+                <span class="w-8 h-8 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center text-base font-bold shadow-xs">🥭</span>
+                <div>
+                  <div class="font-bold">Seasonal Fresh Fruit</div>
+                  <div class="text-[10px] text-secondary font-normal">Alphonso Mango &amp; Real Mixed Orchards</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#celebration-cakes" data-category-target="chocolates">
+                <span class="w-8 h-8 rounded-xl bg-amber-900 text-amber-100 flex items-center justify-center text-base font-bold shadow-xs">🍫</span>
+                <div>
+                  <div class="font-bold">Handcrafted Chocolates</div>
+                  <div class="text-[10px] text-secondary font-normal">Mango Chocolate, Dark Chocolate, Chocolate Bar, Choco Fruit &amp; Nut</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#celebration-cakes" data-category-target="cookies">
+                <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-base font-bold shadow-xs">🍪</span>
+                <div>
+                  <div class="font-bold">Artisanal Cookies</div>
+                  <div class="text-[10px] text-secondary font-normal">Butter Ajwain, Choco Chip, Oats &amp; Almonds</div>
+                </div>
+              </a>
+              <a class="dropdown-category-item flex items-center gap-3 px-3.5 py-2 text-xs font-semibold text-on-background hover:bg-surface-container-low hover:text-primary transition-colors" href="#celebration-cakes" data-category-target="desserts">
+                <span class="w-8 h-8 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-base font-bold shadow-xs">🧁</span>
+                <div>
+                  <div class="font-bold">Gourmet Desserts</div>
+                  <div class="text-[10px] text-secondary font-normal">Walnut Fudge Brownie, Choco Berry Tart</div>
+                </div>
+              </a>
+              <div class="pt-2 px-3.5 pb-1 border-t border-outline-variant/40 mt-1 bg-surface-container-low/40 rounded-b-xl">
+                <a class="flex items-center justify-between text-[11px] font-bold text-primary hover:underline py-1" href="https://wa.me/919330703521?text=Hi%20Bongo%20Bakers,%20I%20want%20to%20customize%20a%20theme%20cake!" target="_blank">
+                  <span>✨ WhatsApp Custom Cake Request</span>
+                  <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Navigation Links (with instant category filtering) -->
+          <a class="nav-category-link text-on-surface font-medium hover:text-primary pb-1 transition-colors duration-150" href="#theme-cakes" data-category-target="theme">Theme Cakes</a>
+          <a class="nav-category-link text-on-surface font-medium hover:text-primary pb-1 transition-colors duration-150" href="#classic-cakes" data-category-target="classic">Classic Cakes</a>
+          <a class="text-on-surface font-medium hover:text-primary pb-1 transition-colors duration-150" href="#customer-wall">Customer Wall</a>
         </nav>
 
-        <!-- Right Header Actions -->
-        <div class="header-actions">
-          <a href="tel:9330703521" class="btn btn-red btn-sm header-call-btn">
-            <span>📞 Call 9330703521</span>
+        <!-- Header Instant Search Bar (Desktop) -->
+        <div class="relative hidden md:flex items-center w-44 lg:w-56 xl:w-64">
+          <span class="material-symbols-outlined absolute left-3 text-secondary text-base pointer-events-none">search</span>
+          <input id="nav-search-input" type="text" placeholder="Search cakes, flavours..." class="w-full pl-9 pr-7 py-2 text-xs rounded-full border border-outline-variant bg-surface-container-low text-on-background placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all shadow-inner" />
+          <button id="nav-search-clear" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary hover:text-primary text-xs font-bold w-5 h-5 rounded-full hover:bg-surface-container-high items-center justify-center" title="Clear search">✕</button>
+        </div>
+
+        <!-- Trailing Actions & Mobile Hamburger -->
+        <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+          <!-- Mobile Search Toggle Button -->
+          <button id="mobile-search-toggle" class="md:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container-low border border-outline-variant/60" title="Search Cakes">
+            <span class="material-symbols-outlined text-xl">search</span>
+          </button>
+
+          <a class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg text-body-sm font-semibold border-1.5 border-outline-variant text-on-surface hover:bg-surface-container-low transition-colors duration-150" href="tel:9330703521">
+            <span class="material-symbols-outlined text-primary text-base">call</span>
+            <span class="hidden xl:inline">9330703521</span>
+            <span class="xl:hidden">Call</span>
           </a>
-          <a href="#/admin" class="btn btn-outline-black btn-sm admin-entry-btn">
-            <span>Chef Admin</span>
+
+          <a class="flex items-center gap-1.5 bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg shadow-sm transition-all duration-150 active:scale-95 text-xs sm:text-sm font-bold" href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers,%20I%20would%20like%20to%20place%20an%20order!" target="_blank">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span class="hidden sm:inline">Order via WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
           </a>
-          <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
-            <span></span><span></span><span></span>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container-low border border-outline-variant/60 focus:outline-none" aria-label="Open Menu">
+            <span class="material-symbols-outlined text-2xl">menu</span>
           </button>
         </div>
       </div>
-    </header>
 
-    <!-- Mobile Drawer Navigation -->
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-      <div class="mobile-nav-drawer">
-        <div class="mobile-nav-header">
-          <img src="/bongo-logo-transparent.png" alt="Bongo Bakers" class="mobile-nav-logo">
-          <button class="close-mobile-nav" id="close-mobile-nav">&times;</button>
-        </div>
-        <div class="mobile-nav-links">
-          <a href="#/" class="mobile-nav-link active">Home</a>
-          <a href="#products-section" class="mobile-nav-link">Menu & Cakes</a>
-          <a href="#social-feed" class="mobile-nav-link">Social Feeds</a>
-          <a href="#reviews" class="mobile-nav-link">Customer Reviews</a>
-          <a href="#contact" class="mobile-nav-link">Contact & Location</a>
-          <a href="#/admin" class="mobile-nav-link mobile-admin-link">Chef Admin Portal</a>
-        </div>
-        <div class="mobile-nav-contact">
-          <p><strong>Bongo Bakers Kolkata</strong></p>
-          <p>5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037</p>
-          <div class="mobile-contact-btns">
-            <a href="tel:9330703521" class="btn btn-red w-full">📞 Call 9330703521</a>
-            <a href="https://wa.me/919330703521" target="_blank" class="btn btn-whatsapp w-full">💬 WhatsApp Us</a>
-          </div>
+      <!-- Expandable Mobile Search Row -->
+      <div id="mobile-search-row" class="hidden md:hidden pb-3 pt-1 border-t border-outline-variant/40">
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-base pointer-events-none">search</span>
+          <input id="mobile-search-input" type="text" placeholder="Search cakes, e.g. Truffle, Mango, Biye..." class="w-full pl-9 pr-8 py-2 text-xs rounded-full border border-outline-variant bg-surface-container-low text-on-background placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white" />
+          <button id="mobile-search-clear" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-primary text-xs font-bold">✕</button>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- MAIN WRAPPER (Switches between Homepage and Product Detail Page) -->
-    <main id="main-content">
-      <!-- ================= HOMEPAGE VIEW ================= -->
-      <div id="home-view" class="page-view active">
-        <!-- Hero Image Banner Section -->
-        <section id="hero" class="hero-banner-section">
-          <div class="hero-banner-container">
-            <div class="hero-image-backdrop" style="background-image: url('/hero-banner.jpg');">
-              <div class="hero-overlay-gradient"></div>
+  <!-- Hero & Celebration Showcase Section -->
+  <main class="flex-grow" id="top">
+    <!-- Hero Banner with Festive North Kolkata Warmth -->
+    <section class="kolkata-pattern border-b border-outline-variant relative overflow-hidden py-10 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 md:px-margin-md">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Left Content Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-3 bg-surface-container-lowest border-2 border-outline-variant px-3.5 py-1.5 rounded-full shadow-sm">
+              <img alt="Bongo Bakers Emblem" class="h-7 w-auto object-contain rounded-full bg-white p-0.5 border border-outline-variant/60" src="./images/cakes/bb-logo-unit.png"/>
+              <span class="text-label-sm font-label-sm text-primary uppercase tracking-wider font-bold">Artisanal Bakery &amp; Confectionery</span>
+              <span class="text-outline-variant">•</span>
+              <span class="text-label-sm font-semibold text-on-surface">Fresh Daily Bakes</span>
             </div>
-            <div class="container hero-content-wrapper">
-              <div class="hero-badge">
-                <span class="badge-dot"></span> Artisanal Bakery & Patisserie • Kolkata
+            <h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-background tracking-tight">
+              Warm Memories, <br class="hidden sm:inline"/>
+              <span class="text-primary font-bold">Sweet Adda</span> &amp; Pure Heritage Cakes.
+            </h1>
+            <p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl">
+              From memorable birthday celebrations to cozy tea-time moments, savor the nostalgic warmth of freshly baked cakes, handcrafted chocolates, and artisanal cookies baked with love and devotion.
+            </p>
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a class="bg-primary-container hover:bg-primary text-on-primary font-bold px-7 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 active:scale-95" href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers,%20I%20would%20like%20to%20customize%20a%20celebration%20cake!">
+                <span class="material-symbols-outlined">cake</span>
+                <span>Customize Your Cake</span>
+              </a>
+              <a class="bg-surface-container-lowest border-2 border-on-background text-on-background hover:bg-on-background hover:text-white font-bold px-6 py-3.5 rounded-lg transition-all duration-200 flex items-center gap-2" href="#celebration-cakes">
+                <span class="material-symbols-outlined">restaurant_menu</span>
+                <span>Explore Daily Fresh Menu</span>
+              </a>
+            </div>
+            <!-- Authentic Trust Badges -->
+            <div class="pt-4 grid grid-cols-3 gap-4 border-t border-outline-variant max-w-lg">
+              <div>
+                <div class="text-headline-sm font-headline-sm text-primary font-extrabold">4.9 ★</div>
+                <div class="text-body-sm text-on-surface-variant">1,200+ 5-Star Reviews</div>
               </div>
-              <h1 class="hero-title">
-                Where Sweet Dreams Come True.<br>
-                <span class="hero-tagline-text">Be Deliciously Surprised...</span>
-              </h1>
-              <p class="hero-description">
-                From bespoke birthday theme cakes to handcrafted Belgian chocolates and warm oven cookies. Freshly baked every morning in Kolkata using 100% pure, natural ingredients.
-              </p>
-              <div class="hero-cta-group">
-                <a href="#products-section" class="btn btn-red btn-lg">Explore Menu & Order</a>
-                <a href="https://wa.me/919330703521?text=Hi%20Bongo%20Bakers!%20I%20want%20to%20order%20a%20customized%20cake." target="_blank" rel="noopener" class="btn btn-white btn-lg">
-                  <span class="whatsapp-icon">💬</span> Order on WhatsApp
+              <div>
+                <div class="text-headline-sm font-headline-sm text-on-background font-extrabold">100%</div>
+                <div class="text-body-sm text-on-surface-variant">Eggless Options Ready</div>
+              </div>
+              <div>
+                <div class="text-headline-sm font-headline-sm text-primary font-extrabold">2-Hour</div>
+                <div class="text-body-sm text-on-surface-variant">Same-Day Delivery</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Grid / Bento Card Showcase  -->
+          <div class="lg:col-span-5 relative">
+            <div class="bg-surface-container-lowest p-4 md:p-6 rounded-xl border-2 border-outline-variant warm-glow space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+                <div class="flex items-center gap-2.5">
+                  <img src="./images/cakes/bb-logo-unit.png" alt="Bongo Bakers" class="h-8 w-auto object-contain bg-white rounded p-0.5 border border-outline-variant/60 shadow-xs" />
+                  <div>
+                    <span class="font-headline-sm text-sm font-bold text-on-background block">Today's Hot Bakes</span>
+                    <span class="text-[10px] text-primary font-semibold">Fresh From Oven</span>
+                  </div>
+                </div>
+                <span class="text-label-sm font-bold text-primary bg-primary-fixed px-2.5 py-1 rounded-full">Chef's Specials</span>
+              </div>
+
+              <!-- Feature 1: Belgian Chocolate Truffle  -->
+              <div class="group flex gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors duration-150 border border-transparent hover:border-outline-variant">
+                <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-outline-variant bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Belgian Chocolate Truffle Cake" src="./images/cakes/chocolate-truffle.jpg"/>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h4 class="font-headline-sm text-base font-bold text-on-background">Chocolate Truffle Cake</h4>
+                      <span class="font-bold text-primary text-sm">₹620 / 1lb</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant line-clamp-2 mt-0.5">Rich dark Belgian chocolate ganache layered between silky chocolate sponge.</p>
+                  </div>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-bold">100% Pure Eggless</span>
+                    <a class="text-xs font-bold text-primary hover:underline flex items-center" href="https://wa.me/919330703521?text=Order%20Belgian%20Chocolate%20Truffle%20Cake">Order <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 2: Butterscotch Crunch Cake  -->
+              <div class="group flex gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors duration-150 border border-transparent hover:border-outline-variant">
+                <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-outline-variant bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Butterscotch Crunch Cake" src="./images/cakes/butterscotch-cake.jpg"/>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h4 class="font-headline-sm text-base font-bold text-on-background">Butterscotch Crunch Cake</h4>
+                      <span class="font-bold text-primary text-sm">₹550 / 1lb</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant line-clamp-2 mt-0.5">Golden caramel drips, praline crunch, and fluffy whipped butterscotch cream.</p>
+                  </div>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="text-[10px] bg-outline-variant/40 text-on-surface-variant px-2 py-0.5 rounded font-semibold">Customer Favorite</span>
+                    <a class="text-xs font-bold text-primary hover:underline flex items-center" href="https://wa.me/919330703521?text=Order%20Butterscotch%20Crunch%20Cake">Order <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature 3: KitKat & Gems Celebration  -->
+              <div class="group flex gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors duration-150 border border-transparent hover:border-outline-variant">
+                <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-outline-variant bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="KitKat Gems Cake" src="./images/cakes/kitkat-cake.jpg"/>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h4 class="font-headline-sm text-base font-bold text-on-background">KitKat &amp; Gems Cake</h4>
+                      <span class="font-bold text-primary text-sm">₹750 / 1.5lb</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant line-clamp-2 mt-0.5">Surrounded with crispy KitKat bars and overflowing with colorful chocolate gems.</p>
+                  </div>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="text-[10px] bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold">Party Showstopper</span>
+                    <a class="text-xs font-bold text-primary hover:underline flex items-center" href="https://wa.me/919330703521?text=Order%20KitKat%20Gems%20Cake">Order <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct Hotline Callout -->
+              <div class="bg-primary-container text-on-primary p-3.5 rounded-lg flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+                  <div>
+                    <div class="text-xs font-medium uppercase tracking-wider text-primary-fixed">Direct WhatsApp Order</div>
+                    <div class="text-sm font-bold tracking-tight">9330703521</div>
+                  </div>
+                </div>
+                <a class="bg-surface-container-lowest text-on-background font-bold text-xs px-3.5 py-1.5 rounded hover:bg-surface-container transition-colors" href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers,%20I%20would%20like%20to%20order%20a%20cake!">
+                  Tap to Chat
                 </a>
               </div>
-              
-              <!-- Quick Highlights Badges -->
-              <div class="hero-trust-bar">
-                <div class="trust-item">
-                  <span class="trust-icon">🎂</span>
-                  <div class="trust-text">
-                    <strong>Custom Theme Cakes</strong>
-                    <span>Weddings, Anniversaries & Birthdays</span>
-                  </div>
-                </div>
-                <div class="trust-item">
-                  <span class="trust-icon">🌱</span>
-                  <div class="trust-text">
-                    <strong>100% Eggless Available</strong>
-                    <span>Pure Vegetarian Recipes Upon Request</span>
-                  </div>
-                </div>
-                <div class="trust-item">
-                  <span class="trust-icon">⚡</span>
-                  <div class="trust-text">
-                    <strong>Same-Day Kolkata Delivery</strong>
-                    <span>Call or WhatsApp 9330703521</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Product Grid Section with Category Filter, Search & Pagination -->
-        <section id="products-section" class="section products-section">
-          <div class="container">
-            <div class="section-header text-center">
-              <span class="section-tag">Our Creations</span>
-              <h2 class="section-heading">Handcrafted Bakery Delicacies</h2>
-            </div>
-
-            <!-- Filter Controls & Search Bar -->
-            <div class="catalog-controls-container">
-              <div class="category-filters-tabs" id="category-filters">
-                <button class="filter-tab active" data-category="all">All Delights</button>
-                <button class="filter-tab" data-category="classic-cakes">Classic Cakes</button>
-                <button class="filter-tab" data-category="theme-cakes">Theme & Celebration</button>
-                <button class="filter-tab" data-category="seasonal-fruit">Seasonal Fruit</button>
-                <button class="filter-tab" data-category="chocolates">Chocolates</button>
-                <button class="filter-tab" data-category="cookies-desserts">Cookies & Desserts</button>
-              </div>
-
-              <div class="catalog-search-sort">
-                <div class="search-box">
-                  <span class="search-icon">🔍</span>
-                  <input type="text" id="catalog-search-input" placeholder="Search by cake name or flavor...">
-                </div>
-                <div class="sort-box">
-                  <select id="catalog-sort-select" aria-label="Sort products">
-                    <option value="default">Featured / Default</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="name-az">Name: A to Z</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Cards Grid -->
-            <div class="products-grid" id="products-grid">
-              <!-- Dynamically rendered by JavaScript -->
-            </div>
-
-            <!-- Pagination Bar -->
-            <div class="pagination-container" id="pagination-container">
-              <!-- Dynamically populated (e.g. Prev, 1, 2, 3, Next) -->
-            </div>
-          </div>
-        </section>
-
-        <!-- Social Media Feeds Section -->
-        <section id="social-feed" class="section social-feed-section">
-          <div class="container">
-            <div class="section-header text-center">
-              <span class="section-tag">Community & Feeds</span>
-              <h2 class="section-heading">Follow Bongo Bakers On Social Media</h2>
-              <p class="section-subheading">Stay tuned with our latest oven-fresh bakes, customer celebrations, and behind-the-scenes magic from Kolkata!</p>
-              
-              <div class="social-channels-bar">
-                <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" class="social-channel-btn ig-btn">
-                  <span class="icon">📷</span> Follow @bongobakerskolkata
-                </a>
-                <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" class="social-channel-btn fb-btn">
-                  <span class="icon">👍</span> Like on Facebook
-                </a>
-              </div>
-            </div>
-
-            <!-- Social Feeds Grid (Placeholders populated via JS / Admin pasted links) -->
-            <div class="social-feed-grid" id="social-feed-grid">
-              <!-- Dynamically rendered from storage -->
-            </div>
-
-            <div class="social-feed-note">
-              <span>💡 Are you an admin? You can share new Instagram / Facebook links directly through the <a href="#/admin">Chef Admin Dashboard</a>.</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- Customer Reviews / Guestbook Section -->
-        <section id="reviews" class="section reviews-section">
-          <div class="container">
-            <div class="reviews-split-layout">
-              <div class="reviews-summary-side">
-                <span class="section-tag">Sweet Words</span>
-                <h2 class="section-heading">What Kolkata Loves About Us</h2>
-                <p class="reviews-desc">
-                  Every slice tells a story of celebration. Read authentic experiences from our wonderful customers or leave your feedback.
-                </p>
-
-                <div class="rating-overview-card">
-                  <div class="score-number">4.9</div>
-                  <div class="score-stars">★★★★★</div>
-                  <div class="score-caption">Based on 120+ verified Kolkata reviews</div>
-                  <div class="rating-breakdown">
-                    <div class="breakdown-row"><span>Taste & Freshness</span><strong>5.0 ★</strong></div>
-                    <div class="breakdown-row"><span>Cake Customization</span><strong>4.9 ★</strong></div>
-                    <div class="breakdown-row"><span>Timely Delivery</span><strong>4.8 ★</strong></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="reviews-feed-side">
-                <!-- Submit Review Form -->
-                <form id="public-review-form" class="review-box-form">
-                  <h3>Leave Your Review</h3>
-                  <div class="form-grid-2">
-                    <div class="form-group">
-                      <label for="rev-user-name">Your Name</label>
-                      <input type="text" id="rev-user-name" required placeholder="e.g. Sourav Mukherjee">
-                    </div>
-                    <div class="form-group">
-                      <label>Your Rating</label>
-                      <div class="star-rating-picker" id="star-picker">
-                        <span class="star-item selected" data-val="1">★</span>
-                        <span class="star-item selected" data-val="2">★</span>
-                        <span class="star-item selected" data-val="3">★</span>
-                        <span class="star-item selected" data-val="4">★</span>
-                        <span class="star-item selected" data-val="5">★</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="rev-user-comment">Your Experience</label>
-                    <textarea id="rev-user-comment" required rows="3" placeholder="Tell us how much you enjoyed our cake or treat..."></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-red w-full">Submit My Review</button>
-                  <p class="review-notice">Reviews appear publicly once verified by our bakery staff.</p>
-                </form>
-
-                <!-- Reviews Stream -->
-                <div class="reviews-stream-container" id="reviews-stream">
-                  <!-- Dynamically rendered -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Location & Contact Section -->
-        <section id="contact" class="section contact-section">
-          <div class="container">
-            <div class="contact-card-box">
-              <div class="contact-info-col">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-heading">Visit Our Kolkata Bakery</h2>
-                <p class="contact-lead">Order custom celebratory cakes, pick up fresh morning pastries, or reach out anytime.</p>
-
-                <div class="contact-detail-items">
-                  <div class="contact-item">
-                    <div class="ci-icon">📍</div>
-                    <div class="ci-text">
-                      <strong>Bakery Address</strong>
-                      <p>5/2/4, Ground Floor, Raja Manindra Road,<br>Kolkata - 700 037, West Bengal, India</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="ci-icon">📞</div>
-                    <div class="ci-text">
-                      <strong>Direct Phone Call</strong>
-                      <p><a href="tel:9330703521" class="contact-link">9330703521</a></p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="ci-icon">💬</div>
-                    <div class="ci-text">
-                      <strong>WhatsApp Order Line</strong>
-                      <p><a href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers!" target="_blank" class="contact-link">9330703521</a> (Quick WhatsApp Inquiry)</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="ci-icon">🕒</div>
-                    <div class="ci-text">
-                      <strong>Bakery Opening Hours</strong>
-                      <p>Monday – Sunday: 10:00 AM – 10:00 PM</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="contact-social-pills">
-                  <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" class="pill-btn">
-                    <span>Facebook: /bongobakerskolkata</span>
-                  </a>
-                  <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" class="pill-btn">
-                    <span>Instagram: /bongobakerskolkata</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="contact-map-col">
-                <div class="map-container-frame">
-                  <iframe 
-                    title="Bongo Bakers Kolkata Location Map"
-                    src="https://maps.google.com/maps?q=Raja+Manindra+Road,+Kolkata+700037&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                  </iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- ================= PRODUCT DETAIL PAGE VIEW (IN SAME WINDOW) ================= -->
-      <div id="product-detail-view" class="page-view">
-        <div class="container product-detail-container">
-          <!-- Back Button & Breadcrumbs -->
-          <div class="detail-navigation-bar">
-            <a href="#products-section" class="btn btn-outline-black btn-sm" id="detail-back-btn">
-              ← Back to All Products
-            </a>
-            <div class="detail-breadcrumbs" id="detail-breadcrumbs">
-              <!-- Breadcrumb dynamically rendered -->
-            </div>
-          </div>
-
-          <!-- Product Details Grid -->
-          <div class="product-detail-layout" id="product-detail-card">
-            <!-- Dynamically populated by JS: Image, Title, Price, Weight selector, Custom Message, WhatsApp CTA -->
-          </div>
-
-          <!-- Related Products Section (Carousel / Static Grid) -->
-          <div class="related-products-section">
-            <div class="related-header">
-              <span class="section-tag">You May Also Like</span>
-              <h3 class="related-title">More Sweet Delicacies</h3>
-              <p class="related-sub">Handcrafted favorites recommended for your special occasion.</p>
-            </div>
-            
-            <div class="related-products-carousel-wrapper">
-              <button class="carousel-nav-btn prev-btn" id="related-prev-btn" aria-label="Previous related products">‹</button>
-              <div class="related-products-track" id="related-products-track">
-                <!-- Dynamically rendered related product cards -->
-              </div>
-              <button class="carousel-nav-btn next-btn" id="related-next-btn" aria-label="Next related products">›</button>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <!-- Comprehensive Footer Structure -->
-    <footer class="main-footer">
-      <div class="container footer-content-grid">
-        <!-- Col 1: Brand Info & About -->
-        <div class="footer-col footer-brand-col">
-          <div class="footer-logo-wrap">
-            <img src="/bongo-logo-transparent.png" alt="Bongo Bakers Logo" class="footer-logo">
+    <!-- Promotional Announcement Bar for Kolkata Delivery Radius -->
+    <div class="bg-tertiary-container text-on-tertiary-container py-3 px-4 text-center border-y border-tertiary">
+      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-3 text-sm font-semibold">
+        <span class="material-symbols-outlined text-lg">celebration</span>
+        <span>Planning a Special Celebration? Get a Free Custom Name Placard &amp; Complimentary Delivery on Orders Above ₹500!</span>
+        <a class="underline hover:text-tertiary-fixed ml-2 font-bold" href="tel:9330703521">Call 9330703521 to Book Your Date</a>
+      </div>
+    </div>
+
+    <!-- Heritage Confectionery Gallery (Authentic Bakery Collection Cakes Collection) -->
+    <section class="py-14 bg-surface-container-lowest border-b border-outline-variant" id="celebration-cakes">
+      <!-- Target anchors for Category navigation -->
+      <div id="theme-cakes" class="relative -top-28 pointer-events-none"></div>
+      <div id="classic-cakes" class="relative -top-28 pointer-events-none"></div>
+      <div id="seasonal-fruit" class="relative -top-28 pointer-events-none"></div>
+      <div id="chocolates" class="relative -top-28 pointer-events-none"></div>
+      <div id="cookies" class="relative -top-28 pointer-events-none"></div>
+      <div id="desserts" class="relative -top-28 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 md:px-margin-md">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-1">
+              <span class="material-symbols-outlined text-sm">stars</span>
+              <span>Freshly Baked Delights</span>
+            </div>
+            <h2 class="text-headline-lg font-headline-lg text-on-background">Signature Cakes &amp; Bakery Specialties</h2>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">Baked fresh every morning with pure dairy cream, natural flavors, and premium ingredients. Handcrafted to sweet perfection!</p>
           </div>
-          <p class="footer-tagline">"Be Deliciously Surprised..."</p>
-          <p class="footer-bio">
-            Kolkata's premier artisanal bakery specializing in custom celebration cakes, theme cakes, Belgian chocolates, and fresh cookies baked with love and premium ingredients.
+
+          <!-- Catalog Live Search Bar -->
+          <div class="relative w-full md:w-80">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg pointer-events-none">search</span>
+            <input id="catalog-search-input" type="text" placeholder="Search cakes, e.g. Truffle, Mango, Biye..." class="w-full pl-10 pr-9 py-2.5 text-xs rounded-xl border border-outline-variant bg-surface-container-low text-on-background placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all shadow-sm" />
+            <button id="catalog-search-clear" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-primary text-xs font-bold w-5 h-5 rounded-full hover:bg-surface-container-high items-center justify-center" title="Clear">✕</button>
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs & Result Count -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-outline-variant/50 mb-6">
+          <div class="flex flex-wrap items-center gap-2" id="category-filters">
+            <button class="cat-btn active px-3.5 py-1.5 rounded-full text-xs font-bold bg-primary text-white transition-colors" data-filter="all">All Items</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="theme">👑 Theme &amp; Wedding</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="classic">🎂 Classic Cakes</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="seasonal">🥭 Seasonal Fruit</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="chocolates">🍫 Chocolates</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="cookies">🍪 Cookies</button>
+            <button class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-surface-container text-on-surface hover:bg-outline-variant/40 transition-colors" data-filter="desserts">🧁 Desserts</button>
+          </div>
+
+          <div id="filter-result-count" class="text-xs font-semibold text-on-surface-variant flex items-center gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span>Showing <strong id="result-count-num" class="text-primary font-bold">24</strong> delicacies</span>
+          </div>
+        </div>
+
+        <!-- 4 Column Product Grid (With All Authentic Pictures from Bakery Collection) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+
+          <!-- Empty State when search matches zero cakes -->
+          <div id="no-results-msg" class="hidden col-span-full py-12 text-center bg-surface-container-low rounded-2xl border border-outline-variant p-8 space-y-3">
+            <div class="w-16 h-16 mx-auto rounded-full bg-primary-fixed text-primary flex items-center justify-center shadow-xs">
+              <span class="material-symbols-outlined text-3xl">search_off</span>
+            </div>
+            <h3 class="font-headline-sm text-lg font-bold text-on-background">No cakes found matching your search</h3>
+            <p class="text-xs text-on-surface-variant max-w-md mx-auto">Try searching for flavours like 'Chocolate', 'Mango', 'Butterscotch', 'Brownie', or click below to reset.</p>
+            <button id="reset-search-btn" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary-container transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-xs">restart_alt</span>
+              <span>Reset Search &amp; Show All</span>
+            </button>
+          </div>
+
+          <!-- Cake 1: Classic Black Forest -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Classic Black Forest Cake" src="./images/cakes/black-forest.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">All-Time Favorite</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Available in 1lb / 2lb / 3lb</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Classic Black Forest Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Moist chocolate sponge soaked in rich cherry reduction, blanketed in chocolate shards.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹499 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Classic%20Black%20Forest%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 2: Butterscotch Crunch Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Butterscotch Crunch Cake" src="./images/cakes/butterscotch-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Crunch Special</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Crunchy Golden Praline</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Butterscotch Crunch Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Caramelized brown sugar sponge layered with whipped butterscotch and homemade golden praline.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹550 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Butterscotch%20Crunch%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 3: Belgian Chocolate Truffle -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Belgian Chocolate Truffle" src="./images/cakes/chocolate-truffle.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">Signature Dark</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Available in 1lb / 2lb</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Belgian Chocolate Truffle</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Velvety molten dark chocolate ganache, handcrafted chocolate balls, and gloss glazed cherries.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹620 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Belgian%20Chocolate%20Truffle">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 4: Bengali Biye Traditional Wedding Theme -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Bengali Biye Traditional Theme Cake" src="./images/cakes/bengali-wedding-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Biye Special</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Custom Tier Option</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Bengali Biye Traditional Theme</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Intricate traditional Bengali wedding motif design with auspicious red &amp; gold handcrafted sugar art.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹1,200 <span class="text-xs font-normal text-secondary">/ Tier</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Bengali%20Biye%20Theme%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 5: Fresh Alphonso Mango Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="seasonal">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Fresh Alphonso Mango Cake" src="./images/cakes/mango-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-tertiary text-white text-[10px] font-bold px-2 py-0.5 rounded">Fresh Fruit</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Seasonal Delight</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Fresh Alphonso Mango Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Loaded with real Alphonso mango pulp, light vanilla sponge, and fresh mango cream frosting.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹650 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Fresh%20Alphonso%20Mango%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 6: Fresh Seasonal Mixed Fruit Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="seasonal">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Mixed Fruit Cake" src="./images/cakes/mixed-fruit-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Real Orchards</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Daily Hand-Cut</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Fresh Seasonal Mixed Fruit</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Topped with glazed kiwi, apple, grapes, and cherries on delicate whipped chantilly cream.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹620 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Fresh%20Mixed%20Fruit%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 7: Oreo Drip Fantasy Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Oreo Drip Fantasy Cake" src="./images/cakes/oreo-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">Kids' Hit</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Crushed Cookies</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Oreo Drip Fantasy Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Oreo cookie crumbs folded in light vanilla cream, dark chocolate drip, and crown of full cookies.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹580 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Oreo%20Fantasy%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 8: KitKat & Gems Celebration Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="KitKat Cake" src="./images/cakes/kitkat-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Festive Star</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Party Edition</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">KitKat &amp; Gems Celebration</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Crisp wafer KitKat fence tied with a ribbon, overflowing with crunchy chocolate gems.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹750 <span class="text-xs font-normal text-secondary">/ 1.5lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20KitKat%20Gems%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 9: Golden Milestone Anniversary Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Anniversary Cake" src="./images/cakes/anniversary-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Anniversary</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Custom Milestone</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Golden Anniversary Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Hand-piped golden accents, edible shimmer, and bespoke couple topper for milestone celebrations.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹950 <span class="text-xs font-normal text-secondary">/ 1.5lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Anniversary%20Theme%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 10: 2-Tier Grand Celebration Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="2 Tier Birthday Cake" src="./images/cakes/two-tier-birthday.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Grand Tier</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>2-Tier Structure</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">2-Tier Grand Celebration</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Impressive double-tier birthday spectacle with custom message and coordinated palette.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹1,400 <span class="text-xs font-normal text-secondary">/ 2-Tier</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%202%20Tier%20Birthday%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 11: Frozen Elsa Theme Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Frozen Elsa Theme Cake" src="./images/cakes/frozen-elsa-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-sky-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Kids' Favorite</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Themed Frosting</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Frozen Elsa Theme Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Magical winter snowflake piping, icy blue cream gradients, and Elsa character crown.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹850 <span class="text-xs font-normal text-secondary">/ 1.5lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Frozen%20Elsa%20Theme%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cake 12: Eden Gardens Cricket Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Cricket Theme Cake" src="./images/cakes/cricket-theme-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Eden Gardens Edition</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Pitch &amp; Bat Set</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Eden Gardens Cricket Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Cricket fever captured on cake with handcrafted edible pitch, bat, ball, and boundary rope.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹850 <span class="text-xs font-normal text-secondary">/ 1.5lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Cricket%20Theme%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 13: Pastel Magical Unicorn Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="theme">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pastel Magical Unicorn Cake" src="./images/cakes/unicorn-theme-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Pastel Magic</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Rainbow Fantasy</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Pastel Magical Unicorn Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Whimsical pastel buttercream swirls, golden edible horn, and rainbow velvet sponge inside.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹890 <span class="text-xs font-normal text-secondary">/ 1.5lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Unicorn%20Theme%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 14: Swiss White Chocolate Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Swiss White Chocolate Cake" src="./images/cakes/white-chocolate-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">Silky Smooth</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Available in 1lb / 2lb</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Swiss White Chocolate Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Delicate white chocolate shavings, creamy vanilla frosting, and light moist chiffon sponge.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹590 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20White%20Chocolate%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 15: Vintage Vanilla Cream Cake -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="classic">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Vintage Vanilla Cream Cake" src="./images/cakes/vanilla-cake.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">Bakery Classic</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Pure Dairy Cream</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Vintage Vanilla Cream Cake</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Classic vanilla sponge soaked in light vanilla syrup and blanketed in fluffy whipped cream.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹450 <span class="text-xs font-normal text-secondary">/ 1lb</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Vanilla%20Cream%20Cake">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Chocolate 1: Mango Chocolate -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="chocolates">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Mango Chocolate" src="./images/cakes/mango-chocolate.jpg"/>
+                <span class="absolute top-2 left-2 bg-tertiary text-white text-[10px] font-bold px-2 py-0.5 rounded">Mango Fusion</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Alphonso Ganache</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Mango Chocolate</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Velvety dark chocolate shells bursting with fresh Alphonso mango ganache. A rich tropical delight.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹180 <span class="text-xs font-normal text-secondary">/ Box</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Mango%20Chocolate">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Chocolate 2: Dark Chocolate -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="chocolates">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Dark Chocolate" src="./images/cakes/dark-fudge.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">70% Cocoa</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Melt-in-Mouth Fudge</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Dark Chocolate</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Dense, intensely rich 70% dark chocolate fudge squares dusted with premium Dutch cocoa powder.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹160 <span class="text-xs font-normal text-secondary">/ Pack</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Dark%20Chocolate">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Chocolate 3: Chocolate Bar -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="chocolates">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Chocolate Bar" src="./images/cakes/chocolate-bar.jpg"/>
+                <span class="absolute top-2 left-2 bg-amber-800 text-white text-[10px] font-bold px-2 py-0.5 rounded">Single Origin</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Artisanal Slab</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Chocolate Bar</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Glossy artisanal dark chocolate tablet tempered to perfection with crisp snap and deep cocoa notes.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹140 <span class="text-xs font-normal text-secondary">/ Bar</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Chocolate%20Bar">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Chocolate 4: Choco Fruit and Nut -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="chocolates">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Choco Fruit and Nut" src="./images/cakes/choco-fruit-nut.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Choco Slab</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Roasted Nuts &amp; Raisins</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Choco Fruit and Nut</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Velvety dark chocolate bar packed with whole almonds, cashews, and golden raisins.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹150 <span class="text-xs font-normal text-secondary">/ Bar</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Choco%20Fruit%20and%20Nut">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cookie 1: Artisanal Butter Ajwain Cookies -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="cookies">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Artisanal Butter Ajwain Cookies" src="./images/cakes/ajwain-cookies.jpg"/>
+                <span class="absolute top-2 left-2 bg-on-background text-white text-[10px] font-bold px-2 py-0.5 rounded">Crisp &amp; Savory</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>250g Jar</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Artisanal Butter Ajwain Cookies</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Crispy salted butter biscuits spiced with aromatic carom seeds (ajwain), ideal with evening tea.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹160 <span class="text-xs font-normal text-secondary">/ 250g</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Ajwain%20Cookies">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cookie 2: Double Chocolate Chunk Cookies -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="cookies">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Double Chocolate Chunk Cookies" src="./images/cakes/chocolate-cookies.jpg"/>
+                <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Choco Crunch</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>250g Jar</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Double Chocolate Cookies</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Crispy butter cookies loaded with dark Belgian chocolate chips. Perfect companion for hot evening tea.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹180 <span class="text-xs font-normal text-secondary">/ 250g</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Chocolate%20Cookies">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cookie 3: Healthy Oats & Roasted Nuts Cookies -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="cookies">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Oats and Nuts Cookies" src="./images/cakes/oats-nuts-cookies.jpg"/>
+                <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Wholesome Bake</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Oats &amp; Almonds</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Oats &amp; Roasted Nuts Cookies</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Golden toasted rolled oats, crunchy California almonds, and pure honey for wholesome snacking.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹190 <span class="text-xs font-normal text-secondary">/ 250g</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Oats%20Nuts%20Cookies">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dessert 1: Classic Walnut Fudge Brownie -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="desserts">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Classic Walnut Fudge Brownie" src="./images/cakes/brownie.jpg"/>
+                <span class="absolute top-2 left-2 bg-tertiary text-white text-[10px] font-bold px-2 py-0.5 rounded">Daily Oven Fresh</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Warm &amp; Gooey</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Classic Walnut Fudge Brownie</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Dense dark chocolate squares with roasted walnuts. Irresistible when microwaved for 15 seconds!</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹80 <span class="text-xs font-normal text-secondary">/ pc</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Walnut%20Brownies">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dessert 2: Choco Berry Artisanal Tart -->
+          <div class="cake-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col justify-between" data-category="desserts">
+            <div>
+              <div class="h-52 overflow-hidden relative bg-surface-container">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Choco Berry Artisanal Tart" src="./images/cakes/tart.jpg"/>
+                <span class="absolute top-2 left-2 bg-tertiary text-white text-[10px] font-bold px-2 py-0.5 rounded">Chef Specialty</span>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                  <span>Buttery Crust</span>
+                </div>
+                <h3 class="font-headline-sm text-lg font-bold text-on-background group-hover:text-primary transition-colors">Choco Berry Artisanal Tart</h3>
+                <p class="text-xs text-on-surface-variant mt-1.5 line-clamp-2">Crisp shortcrust pastry filled with silky dark chocolate silk ganache and crowned with glazed berry.</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+              <span class="text-base font-extrabold text-on-background">₹120 <span class="text-xs font-normal text-secondary">/ pc</span></span>
+              <a class="bg-primary-container hover:bg-primary text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1 transition-colors" href="https://wa.me/919330703521?text=Order%20Choco%20Berry%20Tart">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIME SECTION: Community Wall & Customer Comments ("What Kolkata Says / Kemon Laglo?") -->
+    <section class="py-16 bg-surface-container-low border-b border-outline-variant relative" id="customer-wall">
+      <div class="max-w-7xl mx-auto px-4 md:px-margin-md">
+        <!-- Header Banner for Testimonials -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 bg-primary-fixed text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            <span>Customer Wall • Kemon Laglo?</span>
+          </div>
+          <h2 class="text-headline-lg md:text-display-hero-mobile font-headline-lg text-on-background tracking-tight">
+            Loved by Our Wonderful Customers
+          </h2>
+          <p class="text-body-md text-on-surface-variant mt-2">
+            Hear from families, students, and bakery lovers from Shyambazar, Sovabazar, Dum Dum, and Salt Lake who celebrate life's sweetest milestones with Bongo Bakers.
           </p>
-          <div class="footer-social-icons">
-            <a href="https://facebook.com/bongobakerskolkata" target="_blank" rel="noopener" aria-label="Bongo Bakers Facebook" class="social-icon-btn">
-              <span class="icon">f</span>
-            </a>
-            <a href="https://instagram.com/bongobakerskolkata" target="_blank" rel="noopener" aria-label="Bongo Bakers Instagram" class="social-icon-btn">
-              <span class="icon">📸</span>
-            </a>
-            <a href="https://wa.me/919330703521" target="_blank" rel="noopener" aria-label="Bongo Bakers WhatsApp" class="social-icon-btn">
-              <span class="icon">💬</span>
-            </a>
-            <a href="tel:9330703521" aria-label="Call Bongo Bakers" class="social-icon-btn">
-              <span class="icon">📞</span>
-            </a>
+          <!-- Rating Summary Metric -->
+          <div class="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 p-3 sm:p-4 bg-surface-container-lowest rounded-2xl border-2 border-outline-variant shadow-sm">
+            <img src="./images/cakes/bb-logo-unit.png" alt="Bongo Bakers Certified" class="h-12 sm:h-14 w-auto object-contain bg-white rounded-xl p-1 border border-outline-variant shadow-xs" />
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-black text-primary">4.9</span>
+              <div class="flex text-amber-500 text-sm">★★★★★</div>
+            </div>
+            <div class="h-4 w-px bg-outline-variant hidden sm:block"></div>
+            <span class="text-xs font-semibold text-on-surface">Verified Google &amp; Direct Reviews (1,248+ Ratings)</span>
+            <div class="h-4 w-px bg-outline-variant hidden sm:block"></div>
+            <span class="text-xs font-bold text-primary flex items-center gap-1">
+              <span class="material-symbols-outlined text-xs">verified</span> 100% Authentic Feedback
+            </span>
           </div>
         </div>
 
-        <!-- Col 2: Navigation Links -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="#/">Home</a></li>
-            <li><a href="#products-section">Menu & Online Catalog</a></li>
-            <li><a href="#social-feed">Social Media Updates</a></li>
-            <li><a href="#reviews">Customer Feedback</a></li>
-            <li><a href="#contact">Location & Timings</a></li>
-            <li><a href="#/admin">Chef Management Portal</a></li>
+        <!-- 3-Column Reviews & Customer Comments Masonry-style Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <!-- Review 1: Debanjan Sen (Bagbazar) -->
+          <div class="bg-surface-container-lowest p-6 rounded-xl border-1.5 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-semibold text-on-surface-variant">2 days ago • Shyambazar</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-background leading-relaxed">
+                “Bongo Bakers is such a wonderful bakery! We ordered their <strong class="text-primary font-semibold">Butterscotch Crunch Cake</strong> for my grandmother's 80th birthday. Not overly sweet, perfectly moist, and the fragrance took us straight to joyful celebrations!”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-outline-variant/40 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-bold flex items-center justify-center text-sm">
+                  DS
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-on-background">Debanjan Sen</h4>
+                  <p class="text-[11px] text-on-surface-variant">Bagbazar Resident • Verified Buyer</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+          </div>
+
+          <!-- Review 2: Ananya Mukherjee (Sovabazar) -->
+          <div class="bg-surface-container-lowest p-6 rounded-xl border-1.5 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-semibold text-on-surface-variant">Last week • Sovabazar</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-background leading-relaxed">
+                “Our Sunday evening family 'Adda' is incomplete without Bongo Bakers' cookies and fresh chocolate cakes. The cake finishing is pristine. Plus, WhatsApp ordering directly on 9330703521 was lightning fast; they had hot fresh boxes packed in 15 minutes flat!”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-outline-variant/40 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary font-bold flex items-center justify-center text-sm">
+                  AM
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-on-background">Ananya Mukherjee</h4>
+                  <p class="text-[11px] text-on-surface-variant">Sovabazar • Regular Customer</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+          </div>
+
+          <!-- Review 3: Soumitra & Priya (Dum Dum) -->
+          <div class="bg-surface-container-lowest p-6 rounded-xl border-1.5 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-semibold text-on-surface-variant">3 weeks ago • Dum Dum Park</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-background leading-relaxed">
+                “Ordered a custom 2-tier wedding anniversary cake. The finishing, pure dairy cream, and the <strong class="text-primary font-semibold">Chocolate Truffle</strong> filling were out of this world! Every single guest at our party asked for their phone number. Truly lives up to their tagline: <em>'Be Deliciously Surprised...'</em>”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-outline-variant/40 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-sm">
+                  SP
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-on-background">Soumitra &amp; Priya Banerjee</h4>
+                  <p class="text-[11px] text-on-surface-variant">Dum Dum Park • Anniversary Celebration</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+          </div>
+
+          <!-- Review 4: Dr. R. K. Bhattacharya (Salt Lake Sector 1) -->
+          <div class="bg-surface-container-lowest p-6 rounded-xl border-1.5 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-semibold text-on-surface-variant">Verified Food Reviewer</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-background leading-relaxed">
+                “Their Black Forest cake sets a gold standard for artisanal baking. Fluffy, melt-in-mouth sponge, generous toppings, warm polite staff, and very honest pricing. Truly an exceptional cake!”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-outline-variant/40 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-bold flex items-center justify-center text-sm">
+                  RB
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-on-background">Dr. R. K. Bhattacharya</h4>
+                  <p class="text-[11px] text-on-surface-variant">Salt Lake • Heritage Food Patron</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+          </div>
+
+          <!-- Review 5: Tumpa Saha (Hatibagan) -->
+          <div class="bg-surface-container-lowest p-6 rounded-xl border-1.5 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-semibold text-on-surface-variant">Puja Season Special</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-background leading-relaxed">
+                “Their 100% Eggless birthday cakes are so light and fluffy, you genuinely cannot tell the difference. My mother is strictly vegetarian and she was delighted with the Fresh Fruit cake. Delivered to Hatibagan right on schedule with beautiful packaging!”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-outline-variant/40 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary font-bold flex items-center justify-center text-sm">
+                  TS
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-on-background">Tumpa Saha</h4>
+                  <p class="text-[11px] text-on-surface-variant">Hatibagan • Family Celebration</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+          </div>
+
+          <!-- Interactive Review Submission Box -->
+          <div class="bg-gradient-to-br from-primary to-primary-container p-6 rounded-xl text-white shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">rate_review</span>
+                <h3 class="font-headline-sm text-xl font-bold">Aapnar Kemon Laglo?</h3>
+              </div>
+              <p class="text-xs text-primary-fixed leading-relaxed mb-4">
+                Did you enjoy our cakes, chocolates, or cookies? Share your review and feedback with our baking team!
+              </p>
+              <div class="space-y-2">
+                <input id="rev-name" class="w-full text-xs px-3 py-2 rounded bg-surface-container-lowest text-on-background placeholder:text-secondary border-0 focus:ring-2 focus:ring-on-primary" placeholder="Your Name (e.g., Ananya Sengupta)" type="text"/>
+                <textarea id="rev-comment" class="w-full text-xs px-3 py-2 rounded bg-surface-container-lowest text-on-background placeholder:text-secondary border-0 focus:ring-2 focus:ring-on-primary" placeholder="Share what made your celebration special..." rows="3"></textarea>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/20 flex items-center justify-between">
+              <span class="text-[11px] text-primary-fixed">Instant review or photo share:</span>
+              <button id="send-review-btn" class="bg-surface-container-lowest text-primary hover:bg-surface-bright text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1">
+                <span>Send via WhatsApp</span>
+                <span class="material-symbols-outlined text-xs">send</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bakery Pride Showcase -->
+        <div class="bg-surface-container-lowest rounded-2xl border-2 border-outline-variant p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <img src="./images/cakes/bb-logo-unit.png" alt="Bongo Bakers Heritage Seal" class="w-16 h-16 object-contain rounded-2xl bg-white p-1 border-2 border-outline-variant shadow-sm flex-shrink-0" />
+            <div>
+              <h4 class="font-headline-sm text-lg font-bold text-on-background">Our Freshness &amp; Heritage Promise</h4>
+              <p class="text-body-sm text-on-surface-variant mt-0.5">
+                Baked in small batches every 4 hours using pure butter, certified hygienic dairy cream, and authentic recipes.
+              </p>
+            </div>
+          </div>
+          <a class="flex-shrink-0 bg-on-background hover:bg-black text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors flex items-center gap-2" href="tel:9330703521">
+            <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+            <span>Talk to Bakery Chef: 9330703521</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kolkata Storefront, Directions & Direct Contact Section -->
+    <section class="py-16 bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto px-4 md:px-margin-md">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Storefront Details Column -->
+          <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-1.5 text-primary text-xs font-bold uppercase tracking-wider mb-2">
+                <span class="material-symbols-outlined text-sm">storefront</span>
+                <span>Visit Our Bakery Counter</span>
+              </div>
+              <h2 class="text-headline-lg font-headline-lg text-on-background">
+                Step In for Fresh Oven Bakes &amp; Warm Aromas
+              </h2>
+              <p class="text-body-md text-on-surface-variant mt-3">
+                Experience the authentic bakery atmosphere. Come by for oven-fresh bakes, sample our seasonal treats, or discuss bespoke themed cakes in person.
+              </p>
+            </div>
+
+            <!-- Authentic Contact Card -->
+            <div class="bg-surface-container-low rounded-xl p-6 border-1.5 border-outline-variant space-y-4">
+              <!-- Address -->
+              <div class="flex items-start space-x-3.5">
+                <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 mt-0.5">location_on</span>
+                <div>
+                  <h4 class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Bakery Address</h4>
+                  <p class="text-sm font-bold text-on-background mt-0.5">
+                    5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037
+                  </p>
+                  <span class="text-xs text-secondary font-medium">Near Belgachia / Shyambazar connectivity</span>
+                </div>
+              </div>
+              <!-- Phone Numbers -->
+              <div class="flex items-start space-x-3.5 pt-2 border-t border-outline-variant/40">
+                <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 mt-0.5">call</span>
+                <div>
+                  <h4 class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Order &amp; Inquiry Phone</h4>
+                  <div class="flex items-center gap-3 mt-0.5">
+                    <a class="text-base font-extrabold text-primary hover:underline" href="tel:9330703521">9330703521</a>
+                    <span class="text-xs text-on-surface-variant font-medium">(Direct Call &amp; WhatsApp)</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Opening Hours -->
+              <div class="flex items-start space-x-3.5 pt-2 border-t border-outline-variant/40">
+                <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 mt-0.5">schedule</span>
+                <div>
+                  <h4 class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Bakery Timings</h4>
+                  <p class="text-sm font-semibold text-on-background mt-0.5">
+                    Open Every Day: 8:00 AM to 10:00 PM
+                  </p>
+                </div>
+              </div>
+              <!-- Social Channels -->
+              <div class="flex items-center space-x-4 pt-3 border-t border-outline-variant/40">
+                <span class="text-xs font-bold text-on-surface-variant">Social:</span>
+                <a class="flex items-center gap-1.5 text-xs font-bold text-on-background hover:text-primary transition-colors" href="https://facebook.com/bongobakerskolkata" target="_blank">
+                  <span class="w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px]">f</span>
+                  <span>/bongobakerskolkata</span>
+                </a>
+                <a class="flex items-center gap-1.5 text-xs font-bold text-on-background hover:text-primary transition-colors" href="https://instagram.com/bongobakerskolkata" target="_blank">
+                  <span class="w-5 h-5 rounded-full bg-on-background text-white flex items-center justify-center text-[10px]">ig</span>
+                  <span>/bongobakerskolkata</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex gap-4">
+              <a class="flex-1 bg-primary-container hover:bg-primary text-white text-center font-bold py-3.5 px-4 rounded-lg shadow transition-colors flex items-center justify-center gap-2" href="https://wa.me/919330703521" target="_blank">
+                <span class="material-symbols-outlined">chat</span>
+                <span>Message 9330703521</span>
+              </a>
+              <a class="flex-1 bg-on-background hover:bg-black text-white text-center font-bold py-3.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2" href="tel:9330703521">
+                <span class="material-symbols-outlined">call</span>
+                <span>Call Bakery</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Storefront Ambience & Visual Anchor Column -->
+          <div class="lg:col-span-6 flex flex-col justify-between">
+            <div class="bg-surface-container rounded-2xl overflow-hidden border-2 border-outline-variant h-full relative min-h-[360px] flex flex-col justify-between p-6">
+              <!-- Store Visual Backdrop -->
+              <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-25" alt="Bongo Bakers Storefront" src="./images/cakes/black-forest.jpg"/>
+              </div>
+              <!-- Overlay Card with Kolkata Delivery Radii -->
+              <div class="relative z-10 bg-surface-container-lowest/95 backdrop-blur-md p-5 rounded-xl border border-outline-variant/60 max-w-sm">
+                <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider mb-1">
+                  <span class="material-symbols-outlined text-sm">moped</span>
+                  <span>Direct Delivery Radius</span>
+                </div>
+                <h4 class="font-bold text-sm text-on-background">Fast Delivery to Your Doorstep:</h4>
+                <ul class="text-xs text-on-surface-variant space-y-1.5 mt-2">
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span><strong>Zone 1 (Under 45 mins):</strong> Local neighborhood delivery within 5 km.</span>
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span><strong>Zone 2 (Under 60 mins):</strong> Extended city-wide delivery across nearby areas.</span>
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span><strong>Custom Orders:</strong> Salt Lake, Lake Town &amp; New Town available upon advance booking.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Google Maps Link Pin Trigger -->
+              <div class="relative z-10 mt-6 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-secondary font-medium">Find us on map:</span>
+                  <div class="font-bold text-sm text-on-background">5/2/4, Raja Manindra Rd, Kolkata 700037</div>
+                </div>
+                <a class="bg-primary hover:bg-primary-container text-white px-3.5 py-2 rounded-lg text-xs font-bold flex items-center gap-1 transition-colors" href="https://maps.google.com/?q=5/2/4,+Raja+Manindra+Rd,+Kolkata+-+700037" target="_blank">
+                  <span>Open Maps</span>
+                  <span class="material-symbols-outlined text-xs">navigation</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Persistent Floating WhatsApp Callout for Instant Ordering -->
+  <aside class="fixed bottom-6 right-6 z-40">
+    <a class="flex items-center gap-2.5 bg-primary-container hover:bg-primary text-on-primary px-4 py-3 rounded-full shadow-2xl transition-all duration-200 hover:scale-105 border-2 border-white warm-glow group" href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers!%20I%20want%20to%20order%20a%20fresh%20cake." target="_blank">
+      <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+      <div class="flex flex-col text-left pr-1">
+        <span class="text-[10px] uppercase font-bold tracking-wider text-primary-fixed">Order Online</span>
+        <span class="text-xs font-extrabold tracking-tight">Order: 9330703521</span>
+      </div>
+    </a>
+  </aside>
+
+  <!-- Shared Component: Footer -->
+  <footer class="bg-on-background full-width border-t-2 border-primary text-surface-container-lowest">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-margin-lg py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-surface-dim/20">
+        <!-- Brand & Address Column -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-4">
+            <img alt="Bongo Bakers Official Logo" class="h-20 md:h-24 w-auto object-contain bg-white p-2 rounded-2xl shadow-md border-2 border-outline-variant/60" src="./images/cakes/bb-logo-unit.png"/>
+            <div>
+              <span class="text-headline-lg font-headline-lg font-extrabold text-surface-container-lowest block text-xl md:text-2xl">Bongo Bakers</span>
+              <p class="text-xs text-primary-fixed font-tagline-accent italic">Be Deliciously Surprised...</p>
+              <div class="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-primary/30 border border-primary/50 text-[10px] text-primary-fixed font-bold">
+                Artisanal Bakery &amp; Confectionery
+              </div>
+            </div>
+          </div>
+          <p class="text-body-sm font-body-sm text-surface-container-high max-w-sm">
+            Handcrafted celebration cakes, oven-fresh cookies, and artisanal chocolates made with pure dairy cream and premium natural ingredients.
+          </p>
+          <div class="text-xs text-surface-dim">
+            <strong class="text-white">Bakery Counter:</strong> 5/2/4, Gr. Fl., Raja Manindra Rd., Kolkata - 700 037 <br/>
+            <strong class="text-white">Direct Line:</strong> 9330703521
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-headline-sm font-headline-sm text-primary-container text-base font-bold">Bakery Delights &amp; Menu</h4>
+          <ul class="space-y-2 text-body-sm font-body-sm">
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="#celebration-cakes" data-category-target="all">
+                <span>All Cakes &amp; Bakes</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="#theme-cakes" data-category-target="theme">
+                <span>Theme &amp; Wedding Cakes</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="#classic-cakes" data-category-target="classic">
+                <span>Classic Cakes</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="#chocolates" data-category-target="chocolates">
+                <span>Handcrafted Chocolates</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="#customer-wall">
+                <span>Customer Stories</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="https://wa.me/919330703521" target="_blank">
+                <span>Direct Bakery WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-surface-container-high hover:text-primary-container transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transition-transform" href="tel:9330703521">
+                <span>Call Hotline: 9330703521</span>
+              </a>
+            </li>
           </ul>
         </div>
 
-        <!-- Col 3: Popular Categories -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Our Specialities</h4>
-          <ul class="footer-links-list">
-            <li><a href="#products-section">Classic Chocolate Truffle</a></li>
-            <li><a href="#products-section">Bengali Wedding Theme Cakes</a></li>
-            <li><a href="#products-section">2-Tier Birthday Cakes</a></li>
-            <li><a href="#products-section">Seasonal Fresh Fruit Cakes</a></li>
-            <li><a href="#products-section">Handcrafted Chocolates</a></li>
-            <li><a href="#products-section">Pure Eggless Cakes</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Verified Contact Information -->
-        <div class="footer-col footer-contact-col">
-          <h4 class="footer-heading">Contact Details</h4>
-          <div class="footer-contact-item">
-            <span class="fci-icon">📍</span>
-            <span>5/2/4, Gr. Fl., Raja Manindra Rd.,<br>Kolkata - 700 037</span>
+        <!-- Social & Local Neighborhood Connection -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-headline-sm font-headline-sm text-primary-container text-base font-bold">Follow Our Journey</h4>
+          <p class="text-xs text-surface-container-high">
+            Tag us in your birthdays, anniversaries, and evening cha moments!
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-surface-container-lowest text-on-background font-black flex items-center justify-center text-xs">f</span>
+              <a class="text-surface-dim hover:text-white transition-colors" href="https://facebook.com/bongobakerskolkata" target="_blank">facebook.com/bongobakerskolkata</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-primary text-white font-black flex items-center justify-center text-xs">ig</span>
+              <a class="text-surface-dim hover:text-white transition-colors" href="https://instagram.com/bongobakerskolkata" target="_blank">instagram.com/bongobakerskolkata</a>
+            </div>
           </div>
-          <div class="footer-contact-item">
-            <span class="fci-icon">📞</span>
-            <a href="tel:9330703521" class="fci-link">9330703521</a>
-          </div>
-          <div class="footer-contact-item">
-            <span class="fci-icon">💬</span>
-            <a href="https://wa.me/919330703521" target="_blank" rel="noopener" class="fci-link">9330703521 (WhatsApp)</a>
-          </div>
-          <div class="footer-contact-item">
-            <span class="fci-icon">🌐</span>
-            <span>FB/IG: <strong>/bongobakerskolkata</strong></span>
-          </div>
-          <div class="footer-action-btn-wrap">
-            <a href="https://wa.me/919330703521?text=Hi%20Bongo%20Bakers!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-red btn-sm w-full">
-              Instant WhatsApp Order
-            </a>
+          <div class="pt-2">
+            <span class="inline-block px-2.5 py-1 bg-surface-dim/20 rounded text-[11px] text-surface-dim font-medium">
+              Daily Fresh Batches at 8 AM &amp; 4 PM
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- Footer Bottom Copyright -->
-      <div class="footer-bottom-bar">
-        <div class="container footer-bottom-flex">
-          <p>&copy; 2026 Bongo Bakers Kolkata. All Rights Reserved. Crafted with sweet passion.</p>
-          <div class="footer-legal-links">
-            <span>Freshly Baked in Kolkata</span>
-            <span>•</span>
-            <a href="#/admin">Staff Login</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Chef Admin Panel Overlay (SPA Screen) -->
-    <div id="admin-panel" class="admin-panel-overlay">
-      <div class="admin-panel-window">
-        <div class="admin-panel-top">
-          <div class="admin-brand-title">
-            <img src="/bongo-logo-transparent.png" alt="Bongo Bakers" class="admin-top-logo">
-            <h2>Bongo Bakers Chef Control Center</h2>
-          </div>
-          <a href="#/" class="btn btn-outline-black btn-sm" id="close-admin-btn">Exit Admin</a>
-        </div>
-
-        <!-- Login Card -->
-        <div id="admin-login-box" class="admin-login-container">
-          <div class="admin-login-card">
-            <h3>Staff Authentication</h3>
-            <p>Enter your bakery credentials to manage products, share social media feed links, and moderate reviews.</p>
-            <form id="admin-login-form">
-              <div class="form-group">
-                <label for="admin-user-input">Username</label>
-                <input type="text" id="admin-user-input" required autocomplete="username" placeholder="Username (Default: admin)">
-              </div>
-              <div class="form-group">
-                <label for="admin-pass-input">Password</label>
-                <input type="password" id="admin-pass-input" required autocomplete="current-password" placeholder="Password (Default: bakingo-sweet-admin)">
-              </div>
-              <div id="admin-login-error" class="login-error-alert"></div>
-              <button type="submit" class="btn btn-red w-full">Login to Control Center</button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Logged-in Dashboard -->
-        <div id="admin-dashboard-content" class="admin-dashboard-wrapper hidden">
-          <div class="admin-navigation-tabs">
-            <button class="admin-nav-tab active" data-tab="tab-products">Manage Products & Menu</button>
-            <button class="admin-nav-tab" data-tab="tab-social">
-              Social Media Feed Manager
-              <span class="tab-badge" id="social-count-badge">0</span>
-            </button>
-            <button class="admin-nav-tab" data-tab="tab-reviews">
-              Review Moderation
-              <span class="tab-badge" id="pending-reviews-badge">0</span>
-            </button>
-          </div>
-
-          <!-- TAB 1: Products Catalogue -->
-          <div id="tab-products" class="admin-tab-pane active">
-            <div class="admin-pane-header">
-              <h3>Bakery Creations Catalog</h3>
-              <p>Add new cakes, pastries, or chocolates. Update prices, descriptions, and categories.</p>
-            </div>
-            
-            <div class="admin-two-col-layout">
-              <!-- Add Product Form -->
-              <form id="admin-product-form" class="admin-editor-form">
-                <h4>Add New Treat</h4>
-                <div class="form-group">
-                  <label for="new-prod-title">Product Title</label>
-                  <input type="text" id="new-prod-title" required placeholder="e.g. Royal Strawberry Velvet">
-                </div>
-                <div class="form-grid-2">
-                  <div class="form-group">
-                    <label for="new-prod-price">Base Price (₹)</label>
-                    <input type="number" id="new-prod-price" step="1" required placeholder="e.g. 599">
-                  </div>
-                  <div class="form-group">
-                    <label for="new-prod-cat">Category</label>
-                    <select id="new-prod-cat" required>
-                      <option value="classic-cakes">Classic Cakes</option>
-                      <option value="theme-cakes">Theme Cakes</option>
-                      <option value="seasonal-fruit">Seasonal Fruit Cakes</option>
-                      <option value="chocolates">Chocolates</option>
-                      <option value="cookies-desserts">Cookies & Desserts</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="new-prod-desc">Description & Flavors</label>
-                  <textarea id="new-prod-desc" rows="2" required placeholder="Layer details, flavor notes, sponge textures..."></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="new-prod-file">Upload Image</label>
-                  <div class="custom-file-drop">
-                    <input type="file" id="new-prod-file" accept="image/*">
-                    <span id="file-chosen-status">Choose product image (Optional, Max 2MB)</span>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-red w-full">Save Treat to Catalog</button>
-              </form>
-
-              <!-- Existing Products List -->
-              <div class="admin-existing-list-wrap">
-                <h4>Current Menu Items (<span id="total-prod-count">0</span>)</h4>
-                <div class="admin-items-scroll-list" id="admin-products-list">
-                  <!-- Dynamically populated -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 2: Social Media Feed Manager -->
-          <div id="tab-social" class="admin-tab-pane">
-            <div class="admin-pane-header">
-              <h3>Social Media Feed Manager</h3>
-              <p>Manually share Facebook and Instagram posts to display on the homepage feed by pasting their share links!</p>
-            </div>
-
-            <div class="admin-two-col-layout">
-              <!-- Add Social Share Form -->
-              <form id="admin-social-form" class="admin-editor-form">
-                <h4>Share New Social Post</h4>
-                <div class="form-grid-2">
-                  <div class="form-group">
-                    <label for="social-platform">Platform</label>
-                    <select id="social-platform" required>
-                      <option value="instagram">Instagram</option>
-                      <option value="facebook">Facebook</option>
-                      <option value="youtube">YouTube</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="social-date">Post Date</label>
-                    <input type="text" id="social-date" placeholder="e.g. Today / Sep 12">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="social-share-link">Share Link (Post URL)</label>
-                  <input type="url" id="social-share-link" required placeholder="e.g. https://www.instagram.com/p/C...">
-                  <small class="form-hint">Paste the URL from Instagram or Facebook share button.</small>
-                </div>
-
-                <div class="form-group">
-                  <label for="social-caption">Caption / Headline</label>
-                  <textarea id="social-caption" rows="2" required placeholder="e.g. Fresh Bengali Wedding Cake delivered today in Kolkata! 🎂✨"></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="social-img-url">Photo / Thumbnail URL (Optional)</label>
-                  <input type="url" id="social-img-url" placeholder="https://... (or leave empty for default badge)">
-                </div>
-
-                <button type="submit" class="btn btn-red w-full">Publish to Homepage Feed</button>
-              </form>
-
-              <!-- Current Social Feeds List -->
-              <div class="admin-existing-list-wrap">
-                <h4>Active Feeds on Homepage</h4>
-                <div class="admin-items-scroll-list" id="admin-social-list">
-                  <!-- Dynamically populated -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 3: Review Moderation -->
-          <div id="tab-reviews" class="admin-tab-pane">
-            <div class="admin-pane-header">
-              <h3>Customer Review Moderation</h3>
-              <p>Review and approve incoming customer ratings before they appear on the homepage guestbook.</p>
-            </div>
-
-            <div class="admin-moderation-container" id="admin-moderation-list">
-              <!-- Dynamically populated -->
-            </div>
-          </div>
+      <!-- Footer Copyright Note -->
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-surface-dim gap-3">
+        <p>© 2025 Bongo Bakers. All Rights Reserved. Pure Confectionery Joy &amp; Artisanal Heritage.</p>
+        <div class="flex items-center space-x-4 text-surface-container-high">
+          <span>Crafted with ❤️ for Every Sweet Celebration</span>
         </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Main Module Script -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <!-- Mobile Slide-out Drawer Menu -->
+  <div id="mobile-drawer-overlay" class="fixed inset-0 z-50 pointer-events-none">
+    <!-- Backdrop -->
+    <div id="drawer-backdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+
+    <!-- Drawer Panel -->
+    <div id="mobile-drawer" class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-surface-container-lowest shadow-2xl transition-transform duration-300 translate-x-full pointer-events-auto flex flex-col justify-between overflow-y-auto">
+      <div>
+        <!-- Drawer Header with Large Logo -->
+        <div class="p-4 border-b border-outline-variant flex items-center justify-between bg-surface-container-low">
+          <div class="flex items-center gap-3">
+            <img alt="Bongo Bakers Logo" class="h-14 w-auto object-contain bg-white p-1 rounded-xl shadow-xs border border-outline-variant/60" src="./images/cakes/bb-logo-unit.png"/>
+            <div>
+              <div class="font-extrabold text-primary font-headline-lg text-lg leading-tight">Bongo Bakers</div>
+              <div class="text-[11px] text-primary font-tagline-accent italic">Be Deliciously Surprised...</div>
+            </div>
+          </div>
+          <button id="close-drawer-btn" class="p-2 rounded-lg text-on-surface hover:bg-surface-container text-lg font-bold" aria-label="Close Menu">✕</button>
+        </div>
+
+        <!-- Mobile Drawer Search -->
+        <div class="p-4 border-b border-outline-variant/40">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-base pointer-events-none">search</span>
+            <input id="drawer-search-input" type="text" placeholder="Search cakes, flavours..." class="w-full pl-9 pr-8 py-2 text-xs rounded-full border border-outline-variant bg-surface-container-low text-on-background placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white" />
+            <button id="drawer-search-clear" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-primary text-xs font-bold">✕</button>
+          </div>
+        </div>
+
+        <!-- Drawer Navigation Categories -->
+        <div class="p-4 space-y-1 text-sm font-semibold">
+          <div class="text-[10px] uppercase font-bold text-secondary tracking-wider px-3 py-1">Cake Collections</div>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#celebration-cakes" data-category-target="all">
+            <span class="text-base">🎂</span>
+            <span>All Signature Cakes</span>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 transition-colors font-bold" href="#theme-cakes" data-category-target="theme">
+            <span class="text-base">👑</span>
+            <span>Theme &amp; Wedding Cakes</span>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#classic-cakes" data-category-target="classic">
+            <span class="text-base">🍫</span>
+            <span>Classic Cakes</span>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#seasonal-fruit" data-category-target="seasonal">
+            <span class="text-base">🥭</span>
+            <span>Seasonal Fresh Fruit</span>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#celebration-cakes" data-category-target="chocolates">
+            <span class="text-base">🍫</span>
+            <div class="flex flex-col text-left">
+              <span class="font-bold">Handcrafted Chocolates</span>
+              <span class="text-[11px] text-secondary font-normal">Mango Chocolate, Dark Chocolate, Chocolate Bar, Choco Fruit &amp; Nut</span>
+            </div>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#celebration-cakes" data-category-target="cookies">
+            <span class="text-base">🍪</span>
+            <span>Artisanal Cookies</span>
+          </a>
+
+          <a class="mobile-cat-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#celebration-cakes" data-category-target="desserts">
+            <span class="text-base">🧁</span>
+            <span>Gourmet Desserts</span>
+          </a>
+
+          <div class="pt-3 border-t border-outline-variant/40 mt-3 text-[10px] uppercase font-bold text-secondary tracking-wider px-3">Quick Links</div>
+
+          <a class="mobile-drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="#customer-wall">
+            <span class="material-symbols-outlined text-base text-primary">reviews</span>
+            <span>Customer Reviews</span>
+          </a>
+
+          <a class="mobile-drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" href="tel:9330703521">
+            <span class="material-symbols-outlined text-base text-primary">call</span>
+            <span>Call: 9330703521</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Drawer Footer Actions -->
+      <div class="p-4 border-t border-outline-variant bg-surface-container-low space-y-2">
+        <a class="w-full py-3 px-4 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-colors" href="https://wa.me/919330703521?text=Hello%20Bongo%20Bakers,%20I%20would%20like%20to%20place%20an%20order!" target="_blank">
+          <span class="material-symbols-outlined text-base">chat</span>
+          <span>Order via WhatsApp</span>
+        </a>
+        <p class="text-[10px] text-center text-secondary">5/2/4, Raja Manindra Rd, Kolkata - 700 037</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript for Category Filtering, Live Search & Quick Order Form -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const catButtons = document.querySelectorAll('.cat-btn');
+      const cards = document.querySelectorAll('.cake-card');
+      const navSearchInput = document.getElementById('nav-search-input');
+      const navSearchClear = document.getElementById('nav-search-clear');
+      const catalogSearchInput = document.getElementById('catalog-search-input');
+      const catalogSearchClear = document.getElementById('catalog-search-clear');
+      const mobileSearchInput = document.getElementById('mobile-search-input');
+      const mobileSearchClear = document.getElementById('mobile-search-clear');
+      const drawerSearchInput = document.getElementById('drawer-search-input');
+      const drawerSearchClear = document.getElementById('drawer-search-clear');
+      const mobileSearchToggle = document.getElementById('mobile-search-toggle');
+      const mobileSearchRow = document.getElementById('mobile-search-row');
+      const resultCountNum = document.getElementById('result-count-num');
+      const noResultsMsg = document.getElementById('no-results-msg');
+      const resetSearchBtn = document.getElementById('reset-search-btn');
+
+      let currentCategory = 'all';
+      let currentSearch = '';
+
+      function applyFilterAndSearch() {
+        let visibleCount = 0;
+        const query = currentSearch.trim().toLowerCase();
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          const text = card.textContent.toLowerCase();
+
+          // Check category match
+          const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+
+          // Check search query match
+          let matchesSearch = true;
+          if (query) {
+            matchesSearch = text.includes(query);
+          }
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Update result count display
+        if (resultCountNum) {
+          resultCountNum.textContent = visibleCount;
+        }
+
+        // Toggle No Results card
+        if (noResultsMsg) {
+          noResultsMsg.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+
+        // Update active class on category buttons
+        catButtons.forEach(btn => {
+          const f = btn.getAttribute('data-filter');
+          if (f === currentCategory) {
+            btn.classList.add('active', 'bg-primary', 'text-white');
+            btn.classList.remove('bg-surface-container', 'text-on-surface');
+          } else {
+            btn.classList.remove('active', 'bg-primary', 'text-white');
+            btn.classList.add('bg-surface-container', 'text-on-surface');
+          }
+        });
+
+        // Update clear button visibility
+        const hasQuery = query.length > 0;
+        if (navSearchClear) navSearchClear.style.display = hasQuery ? 'flex' : 'none';
+        if (catalogSearchClear) catalogSearchClear.style.display = hasQuery ? 'flex' : 'none';
+        if (mobileSearchClear) mobileSearchClear.style.display = hasQuery ? 'flex' : 'none';
+        if (drawerSearchClear) drawerSearchClear.style.display = hasQuery ? 'flex' : 'none';
+      }
+
+      function setCategory(cat, smoothScroll = true) {
+        currentCategory = cat;
+        applyFilterAndSearch();
+
+        if (smoothScroll) {
+          const targetSec = document.getElementById('celebration-cakes');
+          if (targetSec) {
+            const top = targetSec.getBoundingClientRect().top + window.pageYOffset - 90;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        }
+      }
+
+      function setSearch(query, smoothScroll = false) {
+        currentSearch = query;
+        if (navSearchInput && navSearchInput.value !== query) navSearchInput.value = query;
+        if (catalogSearchInput && catalogSearchInput.value !== query) catalogSearchInput.value = query;
+        if (mobileSearchInput && mobileSearchInput.value !== query) mobileSearchInput.value = query;
+        if (drawerSearchInput && drawerSearchInput.value !== query) drawerSearchInput.value = query;
+        applyFilterAndSearch();
+
+        if (smoothScroll && query) {
+          const targetSec = document.getElementById('celebration-cakes');
+          if (targetSec) {
+            const top = targetSec.getBoundingClientRect().top + window.pageYOffset - 90;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        }
+      }
+
+      // Category tab button click events
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          setCategory(filter, false);
+        });
+      });
+
+      // Synchronize all search inputs
+      [navSearchInput, catalogSearchInput, mobileSearchInput, drawerSearchInput].forEach(inp => {
+        if (!inp) return;
+        inp.addEventListener('input', (e) => {
+          const shouldScroll = (inp === navSearchInput || inp === mobileSearchInput || inp === drawerSearchInput);
+          setSearch(e.target.value, shouldScroll);
+        });
+      });
+
+      // Clear search buttons
+      [navSearchClear, catalogSearchClear, mobileSearchClear, drawerSearchClear, resetSearchBtn].forEach(btn => {
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          currentCategory = 'all';
+          setSearch('', false);
+        });
+      });
+
+      // Mobile search toggle button in header
+      if (mobileSearchToggle && mobileSearchRow) {
+        mobileSearchToggle.addEventListener('click', () => {
+          mobileSearchRow.classList.toggle('hidden');
+          if (!mobileSearchRow.classList.contains('hidden') && mobileSearchInput) {
+            mobileSearchInput.focus();
+          }
+        });
+      }
+
+      // Close mobile drawer function
+      function closeMobileDrawer() {
+        const drawer = document.getElementById('mobile-drawer');
+        const backdrop = document.getElementById('drawer-backdrop');
+        const overlay = document.getElementById('mobile-drawer-overlay');
+        if (drawer) drawer.classList.add('translate-x-full');
+        if (backdrop) backdrop.classList.remove('opacity-100');
+        if (overlay) overlay.classList.add('pointer-events-none');
+      }
+
+      function openMobileDrawer() {
+        const drawer = document.getElementById('mobile-drawer');
+        const backdrop = document.getElementById('drawer-backdrop');
+        const overlay = document.getElementById('mobile-drawer-overlay');
+        if (drawer) drawer.classList.remove('translate-x-full');
+        if (backdrop) backdrop.classList.add('opacity-100');
+        if (overlay) overlay.classList.remove('pointer-events-none');
+      }
+
+      // Links with data-category-target (Dropdown items & Navigation links)
+      document.querySelectorAll('[data-category-target]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetCategory = link.getAttribute('data-category-target');
+          setCategory(targetCategory, true);
+          closeMobileDrawer();
+        });
+      });
+
+      // Mobile drawer open/close listeners
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const closeDrawerBtn = document.getElementById('close-drawer-btn');
+      const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileDrawer);
+      if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeMobileDrawer);
+      if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeMobileDrawer);
+
+      document.querySelectorAll('.mobile-drawer-link').forEach(link => {
+        link.addEventListener('click', closeMobileDrawer);
+      });
+
+      // URL Hash navigation handler (e.g. #theme-cakes, #classic-cakes, etc.)
+      function handleHash() {
+        const hash = window.location.hash;
+        if (hash === '#theme-cakes') {
+          setCategory('theme', true);
+        } else if (hash === '#classic-cakes') {
+          setCategory('classic', true);
+        } else if (hash === '#seasonal-fruit') {
+          setCategory('seasonal', true);
+        } else if (hash === '#chocolates') {
+          setCategory('chocolates', true);
+        } else if (hash === '#cookies') {
+          setCategory('cookies', true);
+        } else if (hash === '#desserts') {
+          setCategory('desserts', true);
+        } else if (hash === '#celebration-cakes') {
+          setCategory('all', true);
+        }
+      }
+      handleHash();
+      window.addEventListener('hashchange', handleHash);
+
+      // Review submission WhatsApp trigger
+      const revName = document.getElementById('rev-name');
+      const revComment = document.getElementById('rev-comment');
+      const sendReviewBtn = document.getElementById('send-review-btn');
+
+      if (sendReviewBtn) {
+        sendReviewBtn.addEventListener('click', () => {
+          const name = revName.value.trim() || 'A Happy Customer';
+          const comment = revComment.value.trim();
+          if (!comment) {
+            alert('Please enter your review feedback first!');
+            revComment.focus();
+            return;
+          }
+          const text = encodeURIComponent(`Hi Bongo Bakers! Here is my review feedback:\n\nName/Area: ${name}\nReview: ${comment}`);
+          window.open(`https://wa.me/919330703521?text=${text}`, '_blank');
+        });
+      }
+    });
+  </script>
+</body>
 </html>

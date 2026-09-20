@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "black-forest.jpg",
+    "id": "1W2Y4NFNEZSZBDxQ7mtCgquXSTYHK91gJ",
+    "name": "Classic Black Forest Cake",
+    "category": "classic",
+    "price": 499
+  },
+  {
+    "filename": "butterscotch-cake.jpg",
+    "id": "1KSkqvyvCiJGRmS4IjCgp5A439WEe8WGg",
+    "name": "Butterscotch Crunch Cake",
+    "category": "classic",
+    "price": 550
+  },
+  {
+    "filename": "chocolate-truffle.jpg",
+    "id": "1X9RbxV2MAQFtqq7BE_jBmOJ1LfVbywaq",
+    "name": "Belgian Chocolate Truffle",
+    "category": "classic",
+    "price": 620
+  },
+  {
+    "filename": "kitkat-cake.jpg",
+    "id": "15RNjNKJZh1XwzPpe2_yWSCrjKyKxRfUh",
+    "name": "KitKat & Gems Celebration Cake",
+    "category": "classic",
+    "price": 750
+  },
+  {
+    "filename": "oreo-cake.jpg",
+    "id": "101NbtA6e54qeW0aDTYKA2DTCmosw6H8z",
+    "name": "Oreo Drip Fantasy Cake",
+    "category": "classic",
+    "price": 580
+  },
+  {
+    "filename": "vanilla-cake.jpg",
+    "id": "17Gd_okrebFBMzAH-EiFdj4hyesOLmplH",
+    "name": "Vintage Vanilla Cream Cake",
+    "category": "classic",
+    "price": 450
+  },
+  {
+    "filename": "white-chocolate-cake.jpg",
+    "id": "1TNT5GrCeTR5tGBtiBVAp5kpGewDTzjqT",
+    "name": "Swiss White Chocolate Cake",
+    "category": "classic",
+    "price": 590
+  },
+  {
+    "filename": "mango-cake.jpg",
+    "id": "1eVp1bqPOyv9G3GO51jhe1PIhMik-Sr6_",
+    "name": "Fresh Alphonso Mango Cake",
+    "category": "seasonal",
+    "price": 650
+  },
+  {
+    "filename": "mixed-fruit-cake.jpg",
+    "id": "1YGACdIeDirYc0ahi8PDwYvvsKOJmW-41",
+    "name": "Fresh Seasonal Mixed Fruit Cake",
+    "category": "seasonal",
+    "price": 620
+  },
+  {
+    "filename": "bengali-wedding-cake.jpg",
+    "id": "1tuJ8m5zBR4etmNkkd_YEqARhYIfQTwce",
+    "name": "Bengali Biye Traditional Theme Cake",
+    "category": "theme",
+    "price": 1200
+  },
+  {
+    "filename": "anniversary-cake.jpg",
+    "id": "1OCgJRSBlXARB4GbODPYzuAhTNszdo0TF",
+    "name": "Golden Milestone Anniversary Cake",
+    "category": "theme",
+    "price": 950
+  },
+  {
+    "filename": "two-tier-birthday.jpg",
+    "id": "1pyn0Fkk0eHd6uaBtcym2s-cKJxYCwR7U",
+    "name": "2-Tier Grand Celebration Cake",
+    "category": "theme",
+    "price": 1400
+  },
+  {
+    "filename": "frozen-elsa-cake.jpg",
+    "id": "1rW1zJcEHGKvniA0fGwZrE_AE1Fi9qKoA",
+    "name": "Frozen Elsa Theme Cake",
+    "category": "theme",
+    "price": 850
+  },
+  {
+    "filename": "cricket-theme-cake.jpg",
+    "id": "1BNLvJWyMtD6KoX2ZSBXxp8x1erro0-cw",
+    "name": "Kolkata Eden Gardens Cricket Cake",
+    "category": "theme",
+    "price": 850
+  },
+  {
+    "filename": "unicorn-theme-cake.jpg",
+    "id": "1HnBLGgZdCBp3exaDoS99yS6422yqfrJg",
+    "name": "Pastel Magical Unicorn Cake",
+    "category": "theme",
+    "price": 890
+  }
+]
